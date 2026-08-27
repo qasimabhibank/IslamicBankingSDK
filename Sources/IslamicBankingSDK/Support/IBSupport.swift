@@ -47,6 +47,32 @@ enum IBResource {
     static func storyboard(_ name: String) -> UIStoryboard {
         UIStoryboard(name: name, bundle: .module)
     }
+
+    /// Instantiates a storyboard VC by supplying the Swift type explicitly.
+    /// Required for SPM: IB `customModule` lookup often fails and falls back to `UIViewController`.
+    static func instantiate<T: UIViewController>(
+        _ type: T.Type,
+        storyboardName: String = "IslamicBanking",
+        identifier: String = String(describing: T.self)
+    ) -> T {
+        let board = storyboard(storyboardName)
+        return board.instantiateViewController(identifier: identifier) { coder in
+            type.init(coder: coder)
+        }
+    }
+
+    /// Loads a XIB whose root view is the given `UIView` subclass.
+    static func loadViewFromNib<T: UIView>(_ type: T.Type) -> T {
+        let name = String(describing: type)
+        let nib = UINib(nibName: name, bundle: .module)
+        // Prefer first object that already is T (when module resolves).
+        if let view = nib.instantiate(withOwner: nil, options: nil).first as? T {
+            return view
+        }
+        // Fallback: create T and load contents into it via owner pattern is not available;
+        // force-create and copy subviews is fragile. Register class name for ObjC runtime:
+        fatalError("Failed to load \(name).xib as \(name). Ensure @objc(\(name)) is set.")
+    }
 }
 
 // MARK: - String / Int helpers
@@ -237,7 +263,7 @@ final class IBKeyboardBottomConstraintAdjuster {
 // MARK: - Lightweight glass stubs (no third-party blur dependency)
 
 @IBDesignable
-final class IBGlassEffectView: UIView {
+@objc(IBGlassEffectView) class IBGlassEffectView: UIView {
     private let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .systemUltraThinMaterialLight))
 
     @IBInspectable var blurDensity: CGFloat = 0.2
@@ -292,7 +318,7 @@ final class IBGlassEffectView: UIView {
 }
 
 @IBDesignable
-final class IBGlassyContainerView: UIView {
+@objc(IBGlassyContainerView) class IBGlassyContainerView: UIView {
     @IBInspectable var glassCornerRadius: CGFloat = 16 {
         didSet { layer.cornerRadius = glassCornerRadius }
     }

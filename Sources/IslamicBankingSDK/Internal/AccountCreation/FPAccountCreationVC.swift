@@ -14,8 +14,7 @@ enum FPBankingModel: Int {
     case islamic = 1
 }
 
-@objc
-class FPAccountCreationVC: UIViewController {
+@objc(FPAccountCreationVC) class FPAccountCreationVC: UIViewController {
 
     // MARK: - IBOutlets
 

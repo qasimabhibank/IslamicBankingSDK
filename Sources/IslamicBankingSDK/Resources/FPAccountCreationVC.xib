@@ -24,7 +24,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPAccountCreationVC" customModule="IslamicBankingSDK" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPAccountCreationVC" customModule="IslamicBankingSDK">
             <connections>
                 <outlet property="btnContinue" destination="btn-cont" id="out-cont"/>
                 <outlet property="contentView" destination="cnt-ac" id="out-cnt"/>
@@ -108,7 +108,7 @@
                                     <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="card-conv" customClass="IBGlassyContainerView" customModule="IslamicBankingSDK" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="card-conv" customClass="IBGlassyContainerView" customModule="IslamicBankingSDK">
                                     <rect key="frame" x="20" y="97" width="353" height="220"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="unchecked-circle-big" translatesAutoresizingMaskIntoConstraints="NO" id="radio-conv">
@@ -222,7 +222,7 @@
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="clipToBoundsValue" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="card-isl" customClass="IBGlassyContainerView" customModule="IslamicBankingSDK" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="card-isl" customClass="IBGlassyContainerView" customModule="IslamicBankingSDK">
                                     <rect key="frame" x="20" y="333" width="353" height="220"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="unchecked-circle-big" translatesAutoresizingMaskIntoConstraints="NO" id="radio-isl">

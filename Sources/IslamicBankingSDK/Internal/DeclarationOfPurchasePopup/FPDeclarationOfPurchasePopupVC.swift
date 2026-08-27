@@ -8,8 +8,7 @@
 
 import UIKit
 
-@objc
-class FPDeclarationOfPurchasePopupVC: UIViewController {
+@objc(FPDeclarationOfPurchasePopupVC) class FPDeclarationOfPurchasePopupVC: UIViewController {
 
     // MARK: - IBOutlets
 

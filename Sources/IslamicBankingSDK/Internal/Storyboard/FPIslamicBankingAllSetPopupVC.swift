@@ -5,8 +5,7 @@
 
 import UIKit
 
-@objc
-class FPIslamicBankingAllSetPopupVC: FPIslamicBankingBaseVC {
+@objc(FPIslamicBankingAllSetPopupVC) class FPIslamicBankingAllSetPopupVC: FPIslamicBankingBaseVC {
 
     @IBOutlet weak var dimmedBackgroundView: UIView!
     @IBOutlet weak var cardView: UIView!

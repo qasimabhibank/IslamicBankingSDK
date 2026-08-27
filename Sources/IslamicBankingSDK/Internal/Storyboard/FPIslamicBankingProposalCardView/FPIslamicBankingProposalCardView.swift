@@ -55,7 +55,7 @@ struct FPIslamicBankingProposalItem {
     let amount: String
 }
 
-final class FPIslamicBankingProposalCardView: UIView {
+@objc(FPIslamicBankingProposalCardView) class FPIslamicBankingProposalCardView: UIView {
 
     var onTap: (() -> Void)?
 

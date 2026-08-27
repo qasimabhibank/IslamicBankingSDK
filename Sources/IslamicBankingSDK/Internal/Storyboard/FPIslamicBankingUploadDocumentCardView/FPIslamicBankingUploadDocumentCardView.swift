@@ -35,7 +35,7 @@ enum FPIslamicBankingDocumentStepType {
     }
 }
 
-final class FPIslamicBankingUploadDocumentCardView: UIView {
+@objc(FPIslamicBankingUploadDocumentCardView) class FPIslamicBankingUploadDocumentCardView: UIView {
 
     var onActionTapped: (() -> Void)?
 

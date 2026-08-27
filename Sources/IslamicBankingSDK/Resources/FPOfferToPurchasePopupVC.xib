@@ -20,7 +20,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPOfferToPurchasePopupVC" customModule="IslamicBankingSDK" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPOfferToPurchasePopupVC" customModule="IslamicBankingSDK">
             <connections>
                 <outlet property="acceptDimOverlayView" destination="ov-acc" id="out-acc-ov"/>
                 <outlet property="btnAcceptAndContinue" destination="btn-acc" id="out-acc"/>

@@ -19,7 +19,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPIslamicBankingSuccessVC" customModule="IslamicBankingSDK" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPIslamicBankingSuccessVC" customModule="IslamicBankingSDK">
             <connections>
                 <outlet property="btnBack" destination="suc-back" id="suc-out-back"/>
                 <outlet property="btnContinue" destination="suc-cont" id="suc-out-cont"/>

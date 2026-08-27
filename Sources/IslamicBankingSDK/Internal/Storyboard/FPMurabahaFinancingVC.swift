@@ -5,8 +5,7 @@
 
 import UIKit
 
-@objc
-class FPMurabahaFinancingVC: FPIslamicBankingBaseVC {
+@objc(FPMurabahaFinancingVC) class FPMurabahaFinancingVC: FPIslamicBankingBaseVC {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var lblTitle: UILabel!

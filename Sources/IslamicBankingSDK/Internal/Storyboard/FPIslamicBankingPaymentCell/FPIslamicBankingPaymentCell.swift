@@ -5,7 +5,7 @@
 
 import UIKit
 
-final class FPIslamicBankingPaymentCell: UITableViewCell {
+@objc(FPIslamicBankingPaymentCell) class FPIslamicBankingPaymentCell: UITableViewCell {
 
     static let reuseIdentifier = "FPIslamicBankingPaymentCell"
     static let nibName = "FPIslamicBankingPaymentCell"

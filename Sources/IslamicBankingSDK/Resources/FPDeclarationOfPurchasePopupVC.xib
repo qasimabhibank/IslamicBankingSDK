@@ -20,7 +20,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPDeclarationOfPurchasePopupVC" customModule="IslamicBankingSDK" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPDeclarationOfPurchasePopupVC" customModule="IslamicBankingSDK">
             <connections>
                 <outlet property="btnCheckbox" destination="chk-dop" id="out-chk"/>
                 <outlet property="btnGoBack" destination="btn-gb" id="out-gb"/>

@@ -21,7 +21,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPInvoiceUploadPopupVC" customModule="IslamicBankingSDK" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPInvoiceUploadPopupVC" customModule="IslamicBankingSDK">
             <connections>
                 <outlet property="btnDone" destination="btn-done" id="out-done"/>
                 <outlet property="btnGoBack" destination="btn-gb" id="out-gb"/>

@@ -1,7 +1,6 @@
 import UIKit
 
-@objc
-class FPIslamicBankingBaseVC: UIViewController {
+@objc(FPIslamicBankingBaseVC) class FPIslamicBankingBaseVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,40 +35,56 @@ class FPIslamicBankingBaseVC: UIViewController {
     }
 
     func pushIslamicBankingScreen(withIdentifier identifier: String) {
-        let viewController = islamicBankingStoryboard().instantiateViewController(withIdentifier: identifier)
+        let viewController: UIViewController
+        switch identifier {
+        case "FPMurabahaFinancingVC":
+            viewController = IBResource.instantiate(FPMurabahaFinancingVC.self)
+        case "FPIslamicBankingCNICVC":
+            viewController = IBResource.instantiate(FPIslamicBankingCNICVC.self)
+        case "FPIslamicBankingMyProposalsVC":
+            viewController = IBResource.instantiate(FPIslamicBankingMyProposalsVC.self)
+        case "FPIslamicBankingProposalDetailsVC":
+            viewController = IBResource.instantiate(FPIslamicBankingProposalDetailsVC.self)
+        case "FPIslamicBankingProposalDetailVC":
+            viewController = IBResource.instantiate(FPIslamicBankingProposalDetailVC.self)
+        case "FPIslamicBankingAllSetPopupVC":
+            viewController = IBResource.instantiate(FPIslamicBankingAllSetPopupVC.self)
+        default:
+            viewController = islamicBankingStoryboard().instantiateViewController(withIdentifier: identifier)
+        }
         navigationController?.pushViewController(viewController, animated: true)
     }
 
     func pushProposalDetailScreen(withIdentifier identifier: String, proposal: FPMurabahaApplicationModel) {
-        let viewController = islamicBankingStoryboard().instantiateViewController(withIdentifier: identifier)
-
-        if let detailsVC = viewController as? FPIslamicBankingProposalDetailsVC {
+        if identifier == "FPIslamicBankingProposalDetailsVC" {
+            let detailsVC = IBResource.instantiate(FPIslamicBankingProposalDetailsVC.self)
             detailsVC.configure(with: proposal)
-        } else if let completedDetailVC = viewController as? FPIslamicBankingProposalDetailVC {
-            completedDetailVC.configure(with: nil, proposal: proposal)
+            navigationController?.pushViewController(detailsVC, animated: true)
+            return
         }
 
-        navigationController?.pushViewController(viewController, animated: true)
+        let completedDetailVC = IBResource.instantiate(FPIslamicBankingProposalDetailVC.self)
+        completedDetailVC.configure(with: nil, proposal: proposal)
+        navigationController?.pushViewController(completedDetailVC, animated: true)
     }
 
     func pushCompletedProposalDetailScreen(
         repaymentPlanResponse: FPMurabahaRepaymentPlanResponse?,
         proposal: FPMurabahaApplicationModel?
     ) {
-        let viewController = islamicBankingStoryboard()
-            .instantiateViewController(withIdentifier: "FPIslamicBankingProposalDetailVC") as! FPIslamicBankingProposalDetailVC
+        let viewController = IBResource.instantiate(FPIslamicBankingProposalDetailVC.self)
         viewController.configure(with: repaymentPlanResponse, proposal: proposal)
         navigationController?.pushViewController(viewController, animated: true)
     }
 
     func openProposalScreen(withIdentifier identifier: String, proposals: [FPMurabahaApplicationModel]) {
-        let viewController = islamicBankingStoryboard().instantiateViewController(withIdentifier: identifier) as! FPIslamicBankingMyProposalsVC
+        let viewController = IBResource.instantiate(FPIslamicBankingMyProposalsVC.self)
         viewController.proposals = proposals
         navigationController?.pushViewController(viewController, animated: true)
     }
 
     func openCNICScreen(withIdentifier identifier: String, proposals: [FPMurabahaApplicationModel]) {
-        let viewController = islamicBankingStoryboard().instantiateViewController(withIdentifier: identifier) as! FPIslamicBankingCNICVC
+        let viewController = IBResource.instantiate(FPIslamicBankingCNICVC.self)
         navigationController?.pushViewController(viewController, animated: true)
     }
 
@@ -89,8 +104,7 @@ class FPIslamicBankingBaseVC: UIViewController {
     }
 
     func presentAllSetPopup(onBackToHome: (() -> Void)? = nil) {
-        let popup = islamicBankingStoryboard()
-            .instantiateViewController(withIdentifier: "FPIslamicBankingAllSetPopupVC") as! FPIslamicBankingAllSetPopupVC
+        let popup = IBResource.instantiate(FPIslamicBankingAllSetPopupVC.self)
         popup.modalPresentationStyle = .overFullScreen
         popup.modalTransitionStyle = .crossDissolve
         popup.onBackToHome = onBackToHome

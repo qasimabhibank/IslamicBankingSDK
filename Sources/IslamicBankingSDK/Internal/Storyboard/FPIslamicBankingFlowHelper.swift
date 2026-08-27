@@ -1,12 +1,11 @@
 import UIKit
 
-@objc
-class FPIslamicBankingFlowHelper: NSObject {
+@objc public final class FPIslamicBankingFlowHelper: NSObject {
 
     @objc(startFlowFrom:)
-    static func startFlow(from viewController: UIViewController) {
-        let storyboard = IBResource.storyboard("IslamicBanking")
-        let murabahaVC = storyboard.instantiateViewController(withIdentifier: "FPMurabahaFinancingVC")
+    public static func startFlow(from viewController: UIViewController) {
+        // Use typed creator so SPM does not fall back to plain UIViewController.
+        let murabahaVC = IBResource.instantiate(FPMurabahaFinancingVC.self)
         let navigationController = UINavigationController(rootViewController: murabahaVC)
         navigationController.setNavigationBarHidden(true, animated: false)
         navigationController.modalPresentationStyle = .overFullScreen

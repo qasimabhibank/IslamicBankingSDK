@@ -5,8 +5,7 @@
 
 import UIKit
 
-@objc
-class FPIslamicBankingCNICVC: FPIslamicBankingBaseVC {
+@objc(FPIslamicBankingCNICVC) class FPIslamicBankingCNICVC: FPIslamicBankingBaseVC {
 
     @IBOutlet weak var navBarStackView: UIStackView!
     @IBOutlet weak var lblNavTitle: UILabel!

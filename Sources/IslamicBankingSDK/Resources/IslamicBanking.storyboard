@@ -30,7 +30,7 @@
         <!--Murabaha FinancingVC-->
         <scene sceneID="SlC-fi-GEq">
             <objects>
-                <viewController storyboardIdentifier="FPMurabahaFinancingVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7iT-5c-vqv" customClass="FPMurabahaFinancingVC" customModule="IslamicBankingSDK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FPMurabahaFinancingVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7iT-5c-vqv" customClass="FPMurabahaFinancingVC" customModule="IslamicBankingSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rI5-3t-hNC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="1130"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,7 +102,7 @@
                                                     <constraint firstAttribute="height" secondItem="E2D-FH-bCU" secondAttribute="width" multiplier="1197:1600" id="ou0-wi-TsP"/>
                                                 </constraints>
                                             </imageView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K9f-Fa-Ngv" customClass="IBGlassEffectView" customModule="IslamicBankingSDK" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K9f-Fa-Ngv" customClass="IBGlassEffectView" customModule="IslamicBankingSDK">
                                                 <rect key="frame" x="20" y="302" width="353" height="221"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kAM-Ki-p9l">
@@ -686,7 +686,7 @@
         <!--Islamic BankingCNICVC-->
         <scene sceneID="Vn4-78-Cs3">
             <objects>
-                <viewController storyboardIdentifier="FPIslamicBankingCNICVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xyu-xe-YSp" customClass="FPIslamicBankingCNICVC" customModule="IslamicBankingSDK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FPIslamicBankingCNICVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xyu-xe-YSp" customClass="FPIslamicBankingCNICVC" customModule="IslamicBankingSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Juh-TJ-gNT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -894,7 +894,7 @@
         <!--Islamic Banking My ProposalsVC-->
         <scene sceneID="2eS-8J-qPo">
             <objects>
-                <viewController storyboardIdentifier="FPIslamicBankingMyProposalsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="j1f-Xh-KiD" customClass="FPIslamicBankingMyProposalsVC" customModule="IslamicBankingSDK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FPIslamicBankingMyProposalsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="j1f-Xh-KiD" customClass="FPIslamicBankingMyProposalsVC" customModule="IslamicBankingSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XgA-H5-qdR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -991,7 +991,7 @@
         <!--Islamic Banking Proposal DetailsVC-->
         <scene sceneID="nmr-PS-LFM">
             <objects>
-                <viewController storyboardIdentifier="FPIslamicBankingProposalDetailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1a0-aj-cg2" customClass="FPIslamicBankingProposalDetailsVC" customModule="IslamicBankingSDK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FPIslamicBankingProposalDetailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1a0-aj-cg2" customClass="FPIslamicBankingProposalDetailsVC" customModule="IslamicBankingSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MAZ-wA-6PO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1704,7 +1704,7 @@
         <!--Islamic Banking Proposal DetailVC-->
         <scene sceneID="zuc-op-I8c">
             <objects>
-                <viewController storyboardIdentifier="FPIslamicBankingProposalDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tnz-Dr-noU" customClass="FPIslamicBankingProposalDetailVC" customModule="IslamicBankingSDK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FPIslamicBankingProposalDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tnz-Dr-noU" customClass="FPIslamicBankingProposalDetailVC" customModule="IslamicBankingSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GBm-cv-KJ6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2204,7 +2204,7 @@
         <!--Islamic Banking All Set PopupVC-->
         <scene sceneID="all-set-sc">
             <objects>
-                <viewController storyboardIdentifier="FPIslamicBankingAllSetPopupVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="all-set-vc" customClass="FPIslamicBankingAllSetPopupVC" customModule="IslamicBankingSDK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FPIslamicBankingAllSetPopupVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="all-set-vc" customClass="FPIslamicBankingAllSetPopupVC" customModule="IslamicBankingSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="all-set-root">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

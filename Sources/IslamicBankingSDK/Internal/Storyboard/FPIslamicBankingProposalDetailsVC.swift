@@ -5,8 +5,7 @@
 
 import UIKit
 
-@objc
-class FPIslamicBankingProposalDetailsVC: FPIslamicBankingBaseVC {
+@objc(FPIslamicBankingProposalDetailsVC) class FPIslamicBankingProposalDetailsVC: FPIslamicBankingBaseVC {
 
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var btnBack: UIButton!

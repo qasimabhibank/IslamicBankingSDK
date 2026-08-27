@@ -8,8 +8,7 @@
 
 import UIKit
 
-@objc
-class FPInvoiceUploadPopupVC: UIViewController {
+@objc(FPInvoiceUploadPopupVC) class FPInvoiceUploadPopupVC: UIViewController {
 
     // MARK: - IBOutlets
 
