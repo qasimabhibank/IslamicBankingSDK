@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-SemiBold.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+        <array key="Inter-VariableFont_slnt,wght.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPDeclarationOfPurchasePopupVC" customModule="IslamicBankingSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="btnCheckbox" destination="chk-dop" id="out-chk"/>
+                <outlet property="btnGoBack" destination="btn-gb" id="out-gb"/>
+                <outlet property="btnSubmitDeclaration" destination="btn-sub" id="out-sub"/>
+                <outlet property="dataSeparatorView" destination="sep-data" id="out-sep2"/>
+                <outlet property="datePillView" destination="pill-dop" id="out-pill"/>
+                <outlet property="dimmedBackgroundView" destination="dim-dop" id="out-dim"/>
+                <outlet property="headerSeparatorView" destination="sep-hdr" id="out-sep1"/>
+                <outlet property="lblConfirmation" destination="lbl-conf" id="out-conf"/>
+                <outlet property="lblDateTitle" destination="lbl-dt" id="out-dt"/>
+                <outlet property="lblDateValue" destination="lbl-dv" id="out-dv"/>
+                <outlet property="lblDeclaration" destination="lbl-dec" id="out-dec"/>
+                <outlet property="lblNatureOfGoodsHeader" destination="lbl-ngh" id="out-ngh"/>
+                <outlet property="lblNatureOfGoodsValue" destination="lbl-ngv" id="out-ngv"/>
+                <outlet property="lblPurchasePriceHeader" destination="lbl-pph" id="out-pph"/>
+                <outlet property="lblPurchasePriceValue" destination="lbl-ppv" id="out-ppv"/>
+                <outlet property="lblTitle" destination="lbl-title" id="out-title"/>
+                <outlet property="lblTotalTitle" destination="lbl-tt" id="out-tt"/>
+                <outlet property="lblTotalValue" destination="lbl-tv" id="out-tv"/>
+                <outlet property="popupCardView" destination="card-dop" id="out-card"/>
+                <outlet property="submitDimOverlayView" destination="ov-sub" id="out-sub-ov"/>
+                <outlet property="tableContainerView" destination="tbl-box" id="out-tbl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="out-view"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dim-dop">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="card-dop">
+                            <rect key="frame" x="20" y="176.66666666666666" width="353" height="498.66666666666674"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Declaration of Purchase" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-title">
+                                    <rect key="frame" x="20" y="24" width="313" height="22"/>
+                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="18"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Date:" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-dt">
+                                    <rect key="frame" x="20.000000000000004" y="58" width="33.333333333333343" height="16"/>
+                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="13"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pill-dop">
+                                    <rect key="frame" x="59.333333333333336" y="54.666666666666679" width="96.333333333333314" height="22.666666666666664"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="May 01, 2026" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-dv">
+                                            <rect key="frame" x="10" y="3.9999999999999991" width="76.333333333333329" height="14.666666666666664"/>
+                                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
+                                            <color key="textColor" red="0.72199999999999998" green="0.76100000000000001" blue="0.78000000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.050999999999999997" green="0.098000000000000004" blue="0.13300000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="lbl-dv" secondAttribute="bottom" constant="4" id="pill-b"/>
+                                        <constraint firstItem="lbl-dv" firstAttribute="leading" secondItem="pill-dop" secondAttribute="leading" constant="10" id="pill-l"/>
+                                        <constraint firstAttribute="trailing" secondItem="lbl-dv" secondAttribute="trailing" constant="10" id="pill-r"/>
+                                        <constraint firstItem="lbl-dv" firstAttribute="top" secondItem="pill-dop" secondAttribute="top" constant="4" id="pill-t"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-dec">
+                                    <rect key="frame" x="20" y="90.000000000000028" width="313" height="116.33333333333334"/>
+                                    <string key="text">I hereby acknowledge that I have selected/ purchased and negotiated the goods as stated below on behalf of IMD and I further confirm / declare that these selected and negotiated goods (mention below) are of the same nature and specification, as stated in the Order Form and original invoice of purchase is attached. I also acknowledge that I have not used/ consumed the goods purchased on behalf of the bank.</string>
+                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
+                                    <color key="textColor" red="0.72199999999999998" green="0.76100000000000001" blue="0.78000000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbl-box">
+                                    <rect key="frame" x="20" y="218.33333333333337" width="313" height="91"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdr-row">
+                                            <rect key="frame" x="0.0" y="0.0" width="313" height="30"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Nature of goods" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-ngh">
+                                                    <rect key="frame" x="12" y="8.3333333333333144" width="140" height="13.333333333333336"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="11"/>
+                                                    <color key="textColor" red="0.72199999999999998" green="0.76100000000000001" blue="0.78000000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Purchase price" textAlignment="right" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-pph">
+                                                    <rect key="frame" x="161" y="8.3333333333333144" width="140" height="13.333333333333336"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="11"/>
+                                                    <color key="textColor" red="0.72199999999999998" green="0.76100000000000001" blue="0.78000000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lbl-ngh" firstAttribute="centerY" secondItem="hdr-row" secondAttribute="centerY" id="hdr-c1"/>
+                                                <constraint firstItem="lbl-pph" firstAttribute="centerY" secondItem="hdr-row" secondAttribute="centerY" id="hdr-c2"/>
+                                                <constraint firstItem="lbl-ngh" firstAttribute="width" secondItem="lbl-pph" secondAttribute="width" id="hdr-eq"/>
+                                                <constraint firstAttribute="height" constant="30" id="hdr-h"/>
+                                                <constraint firstItem="lbl-ngh" firstAttribute="leading" secondItem="hdr-row" secondAttribute="leading" constant="12" id="hdr-l1"/>
+                                                <constraint firstItem="lbl-pph" firstAttribute="leading" secondItem="lbl-ngh" secondAttribute="trailing" constant="9" id="hdr-m"/>
+                                                <constraint firstItem="lbl-pph" firstAttribute="trailing" secondItem="hdr-row" secondAttribute="trailing" constant="-12" id="hdr-r1"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sep-hdr">
+                                            <rect key="frame" x="0.0" y="30" width="313" height="1"/>
+                                            <color key="backgroundColor" white="1" alpha="0.12" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="sep1-h"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="data-row">
+                                            <rect key="frame" x="0.0" y="31" width="313" height="30"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Raw Material Purchase" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-ngv">
+                                                    <rect key="frame" x="12" y="7.6666666666666847" width="140" height="14.666666666666664"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="PKR 1,500,000" textAlignment="right" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-ppv">
+                                                    <rect key="frame" x="161" y="7.6666666666666847" width="140" height="14.666666666666664"/>
+                                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lbl-ngv" firstAttribute="centerY" secondItem="data-row" secondAttribute="centerY" id="data-c1"/>
+                                                <constraint firstItem="lbl-ppv" firstAttribute="centerY" secondItem="data-row" secondAttribute="centerY" id="data-c2"/>
+                                                <constraint firstItem="lbl-ngv" firstAttribute="width" secondItem="lbl-ppv" secondAttribute="width" id="data-eq"/>
+                                                <constraint firstAttribute="height" constant="30" id="data-h"/>
+                                                <constraint firstItem="lbl-ngv" firstAttribute="leading" secondItem="data-row" secondAttribute="leading" constant="12" id="data-l1"/>
+                                                <constraint firstItem="lbl-ppv" firstAttribute="leading" secondItem="lbl-ngv" secondAttribute="trailing" constant="9" id="data-m"/>
+                                                <constraint firstItem="lbl-ppv" firstAttribute="trailing" secondItem="data-row" secondAttribute="trailing" constant="-12" id="data-r1"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sep-data">
+                                            <rect key="frame" x="0.0" y="61" width="313" height="1"/>
+                                            <color key="backgroundColor" white="1" alpha="0.12" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="sep2-h"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tot-row">
+                                            <rect key="frame" x="0.0" y="62" width="313" height="29"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Total" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-tt">
+                                                    <rect key="frame" x="12" y="7.3333333333333144" width="140" height="14.666666666666664"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="PKR 1,500,000" textAlignment="right" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-tv">
+                                                    <rect key="frame" x="161" y="7.3333333333333144" width="140" height="14.666666666666664"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lbl-tt" firstAttribute="centerY" secondItem="tot-row" secondAttribute="centerY" id="tot-c1"/>
+                                                <constraint firstItem="lbl-tv" firstAttribute="centerY" secondItem="tot-row" secondAttribute="centerY" id="tot-c2"/>
+                                                <constraint firstItem="lbl-tt" firstAttribute="width" secondItem="lbl-tv" secondAttribute="width" id="tot-eq"/>
+                                                <constraint firstAttribute="height" constant="29" id="tot-h"/>
+                                                <constraint firstItem="lbl-tt" firstAttribute="leading" secondItem="tot-row" secondAttribute="leading" constant="12" id="tot-l1"/>
+                                                <constraint firstItem="lbl-tv" firstAttribute="leading" secondItem="lbl-tt" secondAttribute="trailing" constant="9" id="tot-m"/>
+                                                <constraint firstItem="lbl-tv" firstAttribute="trailing" secondItem="tot-row" secondAttribute="trailing" constant="-12" id="tot-r1"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.050999999999999997" green="0.098000000000000004" blue="0.13300000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="tot-row" secondAttribute="bottom" id="tbl-b"/>
+                                        <constraint firstItem="hdr-row" firstAttribute="leading" secondItem="tbl-box" secondAttribute="leading" id="tbl-l"/>
+                                        <constraint firstItem="sep-hdr" firstAttribute="leading" secondItem="tbl-box" secondAttribute="leading" id="tbl-l2"/>
+                                        <constraint firstItem="data-row" firstAttribute="leading" secondItem="tbl-box" secondAttribute="leading" id="tbl-l3"/>
+                                        <constraint firstItem="sep-data" firstAttribute="leading" secondItem="tbl-box" secondAttribute="leading" id="tbl-l4"/>
+                                        <constraint firstItem="tot-row" firstAttribute="leading" secondItem="tbl-box" secondAttribute="leading" id="tbl-l5"/>
+                                        <constraint firstAttribute="trailing" secondItem="hdr-row" secondAttribute="trailing" id="tbl-r"/>
+                                        <constraint firstAttribute="trailing" secondItem="sep-hdr" secondAttribute="trailing" id="tbl-r2"/>
+                                        <constraint firstAttribute="trailing" secondItem="data-row" secondAttribute="trailing" id="tbl-r3"/>
+                                        <constraint firstAttribute="trailing" secondItem="sep-data" secondAttribute="trailing" id="tbl-r4"/>
+                                        <constraint firstAttribute="trailing" secondItem="tot-row" secondAttribute="trailing" id="tbl-r5"/>
+                                        <constraint firstItem="hdr-row" firstAttribute="top" secondItem="tbl-box" secondAttribute="top" id="tbl-t1"/>
+                                        <constraint firstItem="sep-hdr" firstAttribute="top" secondItem="hdr-row" secondAttribute="bottom" id="tbl-t2"/>
+                                        <constraint firstItem="data-row" firstAttribute="top" secondItem="sep-hdr" secondAttribute="bottom" id="tbl-t3"/>
+                                        <constraint firstItem="sep-data" firstAttribute="top" secondItem="data-row" secondAttribute="bottom" id="tbl-t4"/>
+                                        <constraint firstItem="tot-row" firstAttribute="top" secondItem="sep-data" secondAttribute="bottom" id="tbl-t5"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="chk-stack">
+                                    <rect key="frame" x="20" y="321.33333333333337" width="313" height="29.333333333333314"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chk-dop">
+                                            <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="chk-h"/>
+                                                <constraint firstAttribute="width" constant="22" id="chk-w"/>
+                                            </constraints>
+                                            <state key="normal" image="checkbox-unchecked-squre"/>
+                                            <connections>
+                                                <action selector="btnCheckboxTapped:" destination="-1" eventType="touchUpInside" id="act-chk"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="I confirm and accept this declaration on behalf of Ahmed Hassan (S/o Muhammad Hassan)." lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-conf">
+                                            <rect key="frame" x="32" y="0.0" width="281" height="29.333333333333332"/>
+                                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
+                                            <color key="textColor" red="0.72199999999999998" green="0.76100000000000001" blue="0.78000000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wrap-sub">
+                                    <rect key="frame" x="20" y="366.66666666666674" width="313" height="48"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-sub">
+                                            <rect key="frame" x="0.0" y="0.0" width="313" height="48"/>
+                                            <color key="backgroundColor" red="0.14117647059999999" green="0.6705882353" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
+                                            <state key="normal" title="Submit Declaration">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="24"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="btnSubmitDeclarationTapped:" destination="-1" eventType="touchUpInside" id="act-sub"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ov-sub">
+                                            <rect key="frame" x="0.0" y="0.0" width="313" height="48"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="24"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="btn-sub" secondAttribute="trailing" id="NQa-8N-2kp"/>
+                                        <constraint firstAttribute="height" constant="48" id="sub-h"/>
+                                        <constraint firstAttribute="bottom" secondItem="btn-sub" secondAttribute="bottom" id="wrap-sub-bb"/>
+                                        <constraint firstItem="btn-sub" firstAttribute="leading" secondItem="wrap-sub" secondAttribute="leading" id="wrap-sub-bl"/>
+                                        <constraint firstAttribute="trailing" secondItem="wrap-sub" secondAttribute="trailing" id="wrap-sub-br"/>
+                                        <constraint firstItem="btn-sub" firstAttribute="top" secondItem="wrap-sub" secondAttribute="top" id="wrap-sub-bt"/>
+                                        <constraint firstAttribute="bottom" secondItem="ov-sub" secondAttribute="bottom" id="wrap-sub-ob"/>
+                                        <constraint firstItem="ov-sub" firstAttribute="leading" secondItem="wrap-sub" secondAttribute="leading" id="wrap-sub-ol"/>
+                                        <constraint firstAttribute="trailing" secondItem="ov-sub" secondAttribute="trailing" id="wrap-sub-or"/>
+                                        <constraint firstItem="ov-sub" firstAttribute="top" secondItem="wrap-sub" secondAttribute="top" id="wrap-sub-ot"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="24"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-gb">
+                                    <rect key="frame" x="20" y="426.66666666666674" width="313" height="48"/>
+                                    <color key="backgroundColor" red="0.039" green="0.078" blue="0.11" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="gb-h"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
+                                    <state key="normal" title="Go Back">
+                                        <color key="titleColor" name="IslamicTeal"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="24"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" name="IslamicTeal"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="btnGoBackTapped:" destination="-1" eventType="touchUpInside" id="act-gb"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.070999999999999994" green="0.13300000000000001" blue="0.17599999999999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="lbl-title" firstAttribute="top" secondItem="card-dop" secondAttribute="top" constant="24" id="c1"/>
+                                <constraint firstAttribute="trailing" secondItem="lbl-dec" secondAttribute="trailing" constant="20" id="c10"/>
+                                <constraint firstItem="tbl-box" firstAttribute="top" secondItem="lbl-dec" secondAttribute="bottom" constant="12" id="c11"/>
+                                <constraint firstItem="tbl-box" firstAttribute="leading" secondItem="card-dop" secondAttribute="leading" constant="20" id="c12"/>
+                                <constraint firstAttribute="trailing" secondItem="tbl-box" secondAttribute="trailing" constant="20" id="c13"/>
+                                <constraint firstItem="chk-stack" firstAttribute="top" secondItem="tbl-box" secondAttribute="bottom" constant="12" id="c14"/>
+                                <constraint firstItem="chk-stack" firstAttribute="leading" secondItem="card-dop" secondAttribute="leading" constant="20" id="c15"/>
+                                <constraint firstAttribute="trailing" secondItem="chk-stack" secondAttribute="trailing" constant="20" id="c16"/>
+                                <constraint firstItem="wrap-sub" firstAttribute="top" secondItem="chk-stack" secondAttribute="bottom" constant="16" id="c17"/>
+                                <constraint firstItem="wrap-sub" firstAttribute="leading" secondItem="card-dop" secondAttribute="leading" constant="20" id="c18"/>
+                                <constraint firstAttribute="trailing" secondItem="wrap-sub" secondAttribute="trailing" constant="20" id="c19"/>
+                                <constraint firstItem="lbl-title" firstAttribute="leading" secondItem="card-dop" secondAttribute="leading" constant="20" id="c2"/>
+                                <constraint firstItem="btn-gb" firstAttribute="top" secondItem="wrap-sub" secondAttribute="bottom" constant="12" id="c20"/>
+                                <constraint firstItem="btn-gb" firstAttribute="leading" secondItem="card-dop" secondAttribute="leading" constant="20" id="c21"/>
+                                <constraint firstAttribute="trailing" secondItem="btn-gb" secondAttribute="trailing" constant="20" id="c22"/>
+                                <constraint firstAttribute="bottom" secondItem="btn-gb" secondAttribute="bottom" constant="24" id="c23"/>
+                                <constraint firstAttribute="trailing" secondItem="lbl-title" secondAttribute="trailing" constant="20" id="c3"/>
+                                <constraint firstItem="lbl-dt" firstAttribute="top" secondItem="lbl-title" secondAttribute="bottom" constant="12" id="c4"/>
+                                <constraint firstItem="lbl-dt" firstAttribute="leading" secondItem="card-dop" secondAttribute="leading" constant="20" id="c5"/>
+                                <constraint firstItem="pill-dop" firstAttribute="centerY" secondItem="lbl-dt" secondAttribute="centerY" id="c6"/>
+                                <constraint firstItem="pill-dop" firstAttribute="leading" secondItem="lbl-dt" secondAttribute="trailing" constant="6" id="c7"/>
+                                <constraint firstItem="lbl-dec" firstAttribute="top" secondItem="lbl-dt" secondAttribute="bottom" constant="16" id="c8"/>
+                                <constraint firstItem="lbl-dec" firstAttribute="leading" secondItem="card-dop" secondAttribute="leading" constant="20" id="c9"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="card-dop" secondAttribute="bottom" constant="24" id="dim-b"/>
+                        <constraint firstItem="card-dop" firstAttribute="centerY" secondItem="dim-dop" secondAttribute="centerY" id="dim-cy"/>
+                        <constraint firstItem="card-dop" firstAttribute="leading" secondItem="dim-dop" secondAttribute="leading" constant="20" id="dim-l"/>
+                        <constraint firstAttribute="trailing" secondItem="card-dop" secondAttribute="trailing" constant="20" id="dim-r"/>
+                        <constraint firstItem="card-dop" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dim-dop" secondAttribute="top" constant="24" id="dim-t"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="safe-dop"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="dim-dop" secondAttribute="bottom" id="root-b"/>
+                <constraint firstItem="dim-dop" firstAttribute="leading" secondItem="safe-dop" secondAttribute="leading" id="root-l"/>
+                <constraint firstAttribute="trailing" secondItem="dim-dop" secondAttribute="trailing" id="root-r"/>
+                <constraint firstItem="dim-dop" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="root-t"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="0.0"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkbox-unchecked-squre" width="20" height="21"/>
+        <namedColor name="IslamicTeal">
+            <color red="0.2627450980392157" green="0.54117647058823526" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

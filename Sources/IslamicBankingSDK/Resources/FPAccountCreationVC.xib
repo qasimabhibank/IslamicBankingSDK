@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-SemiBold.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+        <array key="Inter-VariableFont_slnt,wght.ttf">
+            <string>Inter-Regular</string>
+        </array>
+        <array key="Urbanist-Medium.ttf">
+            <string>Urbanist-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPAccountCreationVC" customModule="IslamicBankingSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="btnContinue" destination="btn-cont" id="out-cont"/>
+                <outlet property="contentView" destination="cnt-ac" id="out-cnt"/>
+                <outlet property="conventionalCardView" destination="card-conv" id="out-conv"/>
+                <outlet property="conventionalIconContainerView" destination="icon-wrap-conv" id="out-iwc"/>
+                <outlet property="conventionalRadioImageView" destination="radio-conv" id="out-rconv"/>
+                <outlet property="conventionalTagsStackView" destination="tags-conv" id="out-tgc"/>
+                <outlet property="islamicCardView" destination="card-isl" id="out-isl"/>
+                <outlet property="islamicIconContainerView" destination="icon-wrap-isl" id="out-iwi"/>
+                <outlet property="islamicRadioImageView" destination="radio-isl" id="out-risl"/>
+                <outlet property="islamicTagsStackView" destination="tags-isl" id="out-tgi"/>
+                <outlet property="lblBankingModelTitle" destination="lbl-bm" id="out-bm"/>
+                <outlet property="lblSubtitle" destination="lbl-sub" id="out-sub"/>
+                <outlet property="scrollView" destination="scr-ac" id="out-scr"/>
+                <outlet property="view" destination="root-ac" id="out-view"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="root-ac">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgNewBottom" translatesAutoresizingMaskIntoConstraints="NO" id="Xu3-ZK-8IG">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nav-stack">
+                    <rect key="frame" x="0.0" y="118" width="393" height="50"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nav-back-wrap">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-back">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <state key="normal" image="arrow-back-icon"/>
+                                    <connections>
+                                        <action selector="btnBackTapped:" destination="-1" eventType="touchUpInside" id="act-back"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="btn-back" firstAttribute="leading" secondItem="nav-back-wrap" secondAttribute="leading" id="2UO-51-hBH"/>
+                                <constraint firstItem="btn-back" firstAttribute="centerX" secondItem="nav-back-wrap" secondAttribute="centerX" id="bb-cx"/>
+                                <constraint firstItem="btn-back" firstAttribute="centerY" secondItem="nav-back-wrap" secondAttribute="centerY" id="bb-cy"/>
+                                <constraint firstAttribute="width" secondItem="nav-back-wrap" secondAttribute="height" multiplier="1:1" id="bb-sq"/>
+                                <constraint firstAttribute="bottom" secondItem="btn-back" secondAttribute="bottom" id="c3v-D8-61E"/>
+                                <constraint firstAttribute="trailing" secondItem="btn-back" secondAttribute="trailing" id="cSK-W4-5Dg"/>
+                                <constraint firstItem="btn-back" firstAttribute="top" secondItem="nav-back-wrap" secondAttribute="top" id="pLT-rR-oYB"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Account Creation" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-nav">
+                            <rect key="frame" x="50" y="0.0" width="293" height="50"/>
+                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nav-spacer">
+                            <rect key="frame" x="343" y="0.0" width="50" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="nav-spacer" secondAttribute="height" multiplier="1:1" id="ns-sq"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="nav-h"/>
+                    </constraints>
+                </stackView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scr-ac">
+                    <rect key="frame" x="0.0" y="168" width="393" height="536"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnt-ac">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="577"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Banking Model" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-bm">
+                                    <rect key="frame" x="20" y="8" width="353" height="48"/>
+                                    <fontDescription key="fontDescription" name="Urbanist-Medium" family="Urbanist" pointSize="40"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Choose one of the following" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-sub">
+                                    <rect key="frame" x="20" y="64" width="353" height="17"/>
+                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="card-conv" customClass="IBGlassyContainerView" customModule="IslamicBankingSDK" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="97" width="353" height="220"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="unchecked-circle-big" translatesAutoresizingMaskIntoConstraints="NO" id="radio-conv">
+                                            <rect key="frame" x="16" y="16" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="rc-h"/>
+                                                <constraint firstAttribute="width" constant="40" id="rc-w"/>
+                                            </constraints>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icon-wrap-conv">
+                                            <rect key="frame" x="140.66666666666666" y="44" width="72" height="72"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="conventional-banking-icon" translatesAutoresizingMaskIntoConstraints="NO" id="img-conv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="img-conv" secondAttribute="bottom" id="iwc-b"/>
+                                                <constraint firstAttribute="height" constant="72" id="iwc-h"/>
+                                                <constraint firstItem="img-conv" firstAttribute="leading" secondItem="icon-wrap-conv" secondAttribute="leading" id="iwc-l"/>
+                                                <constraint firstAttribute="trailing" secondItem="img-conv" secondAttribute="trailing" id="iwc-r"/>
+                                                <constraint firstItem="img-conv" firstAttribute="top" secondItem="icon-wrap-conv" secondAttribute="top" id="iwc-t"/>
+                                                <constraint firstAttribute="width" constant="72" id="iwc-w"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Conventional Banking" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-conv-title">
+                                            <rect key="frame" x="16" y="128" width="321" height="19.666666666666657"/>
+                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Traditional banking services" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-conv-desc">
+                                            <rect key="frame" x="16" y="151.66666666666669" width="321" height="16"/>
+                                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="13"/>
+                                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tags-conv">
+                                            <rect key="frame" x="88.666666666666686" y="179.66666666666669" width="176" height="24"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pill-dep-conv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="84" height="24"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Deposits" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-dep-conv">
+                                                            <rect key="frame" x="12" y="4" width="60" height="16"/>
+                                                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="11"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="SecondaryBlue"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="lbl-dep-conv" secondAttribute="bottom" constant="4" id="pdc-b"/>
+                                                        <constraint firstAttribute="height" constant="24" id="pdc-h"/>
+                                                        <constraint firstItem="lbl-dep-conv" firstAttribute="leading" secondItem="pill-dep-conv" secondAttribute="leading" constant="12" id="pdc-l"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lbl-dep-conv" secondAttribute="trailing" constant="12" id="pdc-r"/>
+                                                        <constraint firstItem="lbl-dep-conv" firstAttribute="top" secondItem="pill-dep-conv" secondAttribute="top" constant="4" id="pdc-t"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pill-fin-conv">
+                                                    <rect key="frame" x="92" y="0.0" width="84" height="24"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Financing" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-fin-conv">
+                                                            <rect key="frame" x="12" y="4" width="60" height="16"/>
+                                                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="11"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="SecondaryBlue"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="lbl-fin-conv" secondAttribute="bottom" constant="4" id="pfc-b"/>
+                                                        <constraint firstAttribute="height" constant="24" id="pfc-h"/>
+                                                        <constraint firstItem="lbl-fin-conv" firstAttribute="leading" secondItem="pill-fin-conv" secondAttribute="leading" constant="12" id="pfc-l"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lbl-fin-conv" secondAttribute="trailing" constant="12" id="pfc-r"/>
+                                                        <constraint firstItem="lbl-fin-conv" firstAttribute="top" secondItem="pill-fin-conv" secondAttribute="top" constant="4" id="pfc-t"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-conv-tap">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="220"/>
+                                            <connections>
+                                                <action selector="conventionalCardTapped:" destination="-1" eventType="touchUpInside" id="act-conv"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="btn-conv-tap" secondAttribute="bottom" id="cc-bb"/>
+                                        <constraint firstItem="btn-conv-tap" firstAttribute="leading" secondItem="card-conv" secondAttribute="leading" id="cc-bl"/>
+                                        <constraint firstAttribute="trailing" secondItem="btn-conv-tap" secondAttribute="trailing" id="cc-br"/>
+                                        <constraint firstItem="btn-conv-tap" firstAttribute="top" secondItem="card-conv" secondAttribute="top" id="cc-bt"/>
+                                        <constraint firstItem="lbl-conv-desc" firstAttribute="leading" secondItem="card-conv" secondAttribute="leading" constant="16" id="cc-dl"/>
+                                        <constraint firstAttribute="trailing" secondItem="lbl-conv-desc" secondAttribute="trailing" constant="16" id="cc-dr"/>
+                                        <constraint firstItem="lbl-conv-desc" firstAttribute="top" secondItem="lbl-conv-title" secondAttribute="bottom" constant="4" id="cc-dt"/>
+                                        <constraint firstAttribute="height" constant="220" id="cc-h"/>
+                                        <constraint firstItem="icon-wrap-conv" firstAttribute="centerX" secondItem="card-conv" secondAttribute="centerX" id="cc-icx"/>
+                                        <constraint firstItem="icon-wrap-conv" firstAttribute="top" secondItem="card-conv" secondAttribute="top" constant="44" id="cc-it"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tags-conv" secondAttribute="bottom" constant="12" id="cc-pgb"/>
+                                        <constraint firstItem="tags-conv" firstAttribute="centerX" secondItem="card-conv" secondAttribute="centerX" id="cc-pgcx"/>
+                                        <constraint firstItem="tags-conv" firstAttribute="top" secondItem="lbl-conv-desc" secondAttribute="bottom" constant="12" id="cc-pgt"/>
+                                        <constraint firstItem="radio-conv" firstAttribute="leading" secondItem="card-conv" secondAttribute="leading" constant="16" id="cc-rl"/>
+                                        <constraint firstItem="radio-conv" firstAttribute="top" secondItem="card-conv" secondAttribute="top" constant="16" id="cc-rt"/>
+                                        <constraint firstItem="lbl-conv-title" firstAttribute="leading" secondItem="card-conv" secondAttribute="leading" constant="16" id="cc-tl"/>
+                                        <constraint firstAttribute="trailing" secondItem="lbl-conv-title" secondAttribute="trailing" constant="16" id="cc-tr"/>
+                                        <constraint firstItem="lbl-conv-title" firstAttribute="top" secondItem="icon-wrap-conv" secondAttribute="bottom" constant="12" id="cc-tt"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.29999999999999999"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipToBoundsValue" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="card-isl" customClass="IBGlassyContainerView" customModule="IslamicBankingSDK" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="333" width="353" height="220"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="unchecked-circle-big" translatesAutoresizingMaskIntoConstraints="NO" id="radio-isl">
+                                            <rect key="frame" x="16" y="16" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="ri-h"/>
+                                                <constraint firstAttribute="width" constant="40" id="ri-w"/>
+                                            </constraints>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icon-wrap-isl">
+                                            <rect key="frame" x="140.66666666666666" y="44" width="72" height="72"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="islamic-banking-icon" translatesAutoresizingMaskIntoConstraints="NO" id="img-isl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="img-isl" secondAttribute="bottom" id="iwi-b"/>
+                                                <constraint firstAttribute="height" constant="72" id="iwi-h"/>
+                                                <constraint firstItem="img-isl" firstAttribute="leading" secondItem="icon-wrap-isl" secondAttribute="leading" id="iwi-l"/>
+                                                <constraint firstAttribute="trailing" secondItem="img-isl" secondAttribute="trailing" id="iwi-r"/>
+                                                <constraint firstItem="img-isl" firstAttribute="top" secondItem="icon-wrap-isl" secondAttribute="top" id="iwi-t"/>
+                                                <constraint firstAttribute="width" constant="72" id="iwi-w"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Islamic Banking" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-isl-title">
+                                            <rect key="frame" x="16" y="128" width="321" height="19.666666666666657"/>
+                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Shariah-compliant financial solutions" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-isl-desc">
+                                            <rect key="frame" x="16" y="151.66666666666663" width="321" height="16"/>
+                                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="13"/>
+                                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tags-isl">
+                                            <rect key="frame" x="88.666666666666686" y="179.66666666666663" width="176" height="24"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pill-dep-isl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="84" height="24"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Deposits" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-dep-isl">
+                                                            <rect key="frame" x="12" y="4" width="60" height="16"/>
+                                                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="11"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="SecondaryBlue"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="lbl-dep-isl" secondAttribute="bottom" constant="4" id="pdi-b"/>
+                                                        <constraint firstAttribute="height" constant="24" id="pdi-h"/>
+                                                        <constraint firstItem="lbl-dep-isl" firstAttribute="leading" secondItem="pill-dep-isl" secondAttribute="leading" constant="12" id="pdi-l"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lbl-dep-isl" secondAttribute="trailing" constant="12" id="pdi-r"/>
+                                                        <constraint firstItem="lbl-dep-isl" firstAttribute="top" secondItem="pill-dep-isl" secondAttribute="top" constant="4" id="pdi-t"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pill-fin-isl">
+                                                    <rect key="frame" x="92" y="0.0" width="84" height="24"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Financing" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-fin-isl">
+                                                            <rect key="frame" x="12" y="4" width="60" height="16"/>
+                                                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="11"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="SecondaryBlue"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="lbl-fin-isl" secondAttribute="bottom" constant="4" id="pfi-b"/>
+                                                        <constraint firstAttribute="height" constant="24" id="pfi-h"/>
+                                                        <constraint firstItem="lbl-fin-isl" firstAttribute="leading" secondItem="pill-fin-isl" secondAttribute="leading" constant="12" id="pfi-l"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lbl-fin-isl" secondAttribute="trailing" constant="12" id="pfi-r"/>
+                                                        <constraint firstItem="lbl-fin-isl" firstAttribute="top" secondItem="pill-fin-isl" secondAttribute="top" constant="4" id="pfi-t"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-isl-tap">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="220"/>
+                                            <connections>
+                                                <action selector="islamicCardTapped:" destination="-1" eventType="touchUpInside" id="act-isl"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="btn-isl-tap" secondAttribute="bottom" id="ci-bb"/>
+                                        <constraint firstItem="btn-isl-tap" firstAttribute="leading" secondItem="card-isl" secondAttribute="leading" id="ci-bl"/>
+                                        <constraint firstAttribute="trailing" secondItem="btn-isl-tap" secondAttribute="trailing" id="ci-br"/>
+                                        <constraint firstItem="btn-isl-tap" firstAttribute="top" secondItem="card-isl" secondAttribute="top" id="ci-bt"/>
+                                        <constraint firstItem="lbl-isl-desc" firstAttribute="leading" secondItem="card-isl" secondAttribute="leading" constant="16" id="ci-dl"/>
+                                        <constraint firstAttribute="trailing" secondItem="lbl-isl-desc" secondAttribute="trailing" constant="16" id="ci-dr"/>
+                                        <constraint firstItem="lbl-isl-desc" firstAttribute="top" secondItem="lbl-isl-title" secondAttribute="bottom" constant="4" id="ci-dt"/>
+                                        <constraint firstAttribute="height" constant="220" id="ci-h"/>
+                                        <constraint firstItem="icon-wrap-isl" firstAttribute="centerX" secondItem="card-isl" secondAttribute="centerX" id="ci-icx"/>
+                                        <constraint firstItem="icon-wrap-isl" firstAttribute="top" secondItem="card-isl" secondAttribute="top" constant="44" id="ci-it"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tags-isl" secondAttribute="bottom" constant="12" id="ci-pgb"/>
+                                        <constraint firstItem="tags-isl" firstAttribute="centerX" secondItem="card-isl" secondAttribute="centerX" id="ci-pgcx"/>
+                                        <constraint firstItem="tags-isl" firstAttribute="top" secondItem="lbl-isl-desc" secondAttribute="bottom" constant="12" id="ci-pgt"/>
+                                        <constraint firstItem="radio-isl" firstAttribute="leading" secondItem="card-isl" secondAttribute="leading" constant="16" id="ci-rl"/>
+                                        <constraint firstItem="radio-isl" firstAttribute="top" secondItem="card-isl" secondAttribute="top" constant="16" id="ci-rt"/>
+                                        <constraint firstItem="lbl-isl-title" firstAttribute="leading" secondItem="card-isl" secondAttribute="leading" constant="16" id="ci-tl"/>
+                                        <constraint firstAttribute="trailing" secondItem="lbl-isl-title" secondAttribute="trailing" constant="16" id="ci-tr"/>
+                                        <constraint firstItem="lbl-isl-title" firstAttribute="top" secondItem="icon-wrap-isl" secondAttribute="bottom" constant="12" id="ci-tt"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipToBoundsValue" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.29999999999999999"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="card-isl" secondAttribute="bottom" constant="24" id="cnt-b"/>
+                                <constraint firstItem="lbl-bm" firstAttribute="leading" secondItem="cnt-ac" secondAttribute="leading" constant="20" id="cnt-l1"/>
+                                <constraint firstItem="lbl-sub" firstAttribute="leading" secondItem="cnt-ac" secondAttribute="leading" constant="20" id="cnt-l2"/>
+                                <constraint firstItem="card-conv" firstAttribute="leading" secondItem="cnt-ac" secondAttribute="leading" constant="20" id="cnt-l3"/>
+                                <constraint firstItem="card-isl" firstAttribute="leading" secondItem="cnt-ac" secondAttribute="leading" constant="20" id="cnt-l4"/>
+                                <constraint firstAttribute="trailing" secondItem="lbl-bm" secondAttribute="trailing" constant="20" id="cnt-r1"/>
+                                <constraint firstAttribute="trailing" secondItem="lbl-sub" secondAttribute="trailing" constant="20" id="cnt-r2"/>
+                                <constraint firstAttribute="trailing" secondItem="card-conv" secondAttribute="trailing" constant="20" id="cnt-r3"/>
+                                <constraint firstAttribute="trailing" secondItem="card-isl" secondAttribute="trailing" constant="20" id="cnt-r4"/>
+                                <constraint firstItem="lbl-bm" firstAttribute="top" secondItem="cnt-ac" secondAttribute="top" constant="8" id="cnt-t1"/>
+                                <constraint firstItem="lbl-sub" firstAttribute="top" secondItem="lbl-bm" secondAttribute="bottom" constant="8" id="cnt-t2"/>
+                                <constraint firstItem="card-conv" firstAttribute="top" secondItem="lbl-sub" secondAttribute="bottom" constant="16" id="cnt-t3"/>
+                                <constraint firstItem="card-isl" firstAttribute="top" secondItem="card-conv" secondAttribute="bottom" constant="16" id="cnt-t4"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="cnt-ac" secondAttribute="bottom" id="scr-b"/>
+                        <constraint firstItem="cnt-ac" firstAttribute="leading" secondItem="scr-ac" secondAttribute="leading" id="scr-l"/>
+                        <constraint firstAttribute="trailing" secondItem="cnt-ac" secondAttribute="trailing" id="scr-r"/>
+                        <constraint firstItem="cnt-ac" firstAttribute="top" secondItem="scr-ac" secondAttribute="top" id="scr-t"/>
+                        <constraint firstItem="cnt-ac" firstAttribute="width" secondItem="scr-ac" secondAttribute="width" id="scr-w"/>
+                    </constraints>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-cont">
+                    <rect key="frame" x="20" y="720" width="353" height="48"/>
+                    <color key="backgroundColor" name="ABHIGreenColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="cont-h"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                    <state key="normal" title="Continue">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnContinueTapped:" destination="-1" eventType="touchUpInside" id="act-cont"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="safe-ac"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Xu3-ZK-8IG" secondAttribute="bottom" id="XB3-Nz-kBP"/>
+                <constraint firstItem="Xu3-ZK-8IG" firstAttribute="top" secondItem="root-ac" secondAttribute="top" id="ak0-KA-ayD"/>
+                <constraint firstAttribute="trailing" secondItem="Xu3-ZK-8IG" secondAttribute="trailing" id="fCY-p4-6jG"/>
+                <constraint firstItem="Xu3-ZK-8IG" firstAttribute="leading" secondItem="safe-ac" secondAttribute="leading" id="guM-4T-vF0"/>
+                <constraint firstItem="safe-ac" firstAttribute="bottom" secondItem="btn-cont" secondAttribute="bottom" constant="16" id="root-cb"/>
+                <constraint firstItem="btn-cont" firstAttribute="leading" secondItem="safe-ac" secondAttribute="leading" constant="20" id="root-cl"/>
+                <constraint firstItem="safe-ac" firstAttribute="trailing" secondItem="btn-cont" secondAttribute="trailing" constant="20" id="root-cr"/>
+                <constraint firstItem="btn-cont" firstAttribute="top" secondItem="scr-ac" secondAttribute="bottom" constant="16" id="root-ct"/>
+                <constraint firstItem="nav-stack" firstAttribute="leading" secondItem="safe-ac" secondAttribute="leading" id="root-nl"/>
+                <constraint firstItem="safe-ac" firstAttribute="trailing" secondItem="nav-stack" secondAttribute="trailing" id="root-nr"/>
+                <constraint firstItem="nav-stack" firstAttribute="top" secondItem="safe-ac" secondAttribute="top" id="root-nt"/>
+                <constraint firstItem="scr-ac" firstAttribute="leading" secondItem="safe-ac" secondAttribute="leading" id="root-sl"/>
+                <constraint firstItem="safe-ac" firstAttribute="trailing" secondItem="scr-ac" secondAttribute="trailing" id="root-sr"/>
+                <constraint firstItem="scr-ac" firstAttribute="top" secondItem="nav-stack" secondAttribute="bottom" id="root-st"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="0.0"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow-back-icon" width="40" height="40"/>
+        <image name="bgNewBottom" width="393" height="852"/>
+        <image name="conventional-banking-icon" width="88" height="88"/>
+        <image name="islamic-banking-icon" width="88" height="88"/>
+        <image name="unchecked-circle-big" width="120" height="120"/>
+        <namedColor name="ABHIGreenColor">
+            <color red="0.14100000262260437" green="0.66699999570846558" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryBlue">
+            <color red="0.090000003576278687" green="0.16500000655651093" blue="0.27500000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

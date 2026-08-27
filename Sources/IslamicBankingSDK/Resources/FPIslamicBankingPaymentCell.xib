@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="140" id="pay-cell" customClass="FPIslamicBankingPaymentCell" customModule="IslamicBankingSDK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="140"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pay-cell" id="pay-content">
+                <rect key="frame" x="0.0" y="0.0" width="361" height="140"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pay-card">
+                        <rect key="frame" x="0.0" y="0.0" width="361" height="128"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pay-badge">
+                                <rect key="frame" x="16" y="16" width="32" height="32"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pay-index">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                        <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.14117647059999999" green="0.6705882353" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="pay-badge-w"/>
+                                    <constraint firstAttribute="height" constant="32" id="pay-badge-h"/>
+                                    <constraint firstItem="pay-index" firstAttribute="leading" secondItem="pay-badge" secondAttribute="leading" id="pay-index-l"/>
+                                    <constraint firstAttribute="trailing" secondItem="pay-index" secondAttribute="trailing" id="pay-index-r"/>
+                                    <constraint firstItem="pay-index" firstAttribute="top" secondItem="pay-badge" secondAttribute="top" id="pay-index-t"/>
+                                    <constraint firstAttribute="bottom" secondItem="pay-index" secondAttribute="bottom" id="pay-index-b"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 22, 2026" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pay-date">
+                                <rect key="frame" x="56" y="23" width="180" height="18"/>
+                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="107,833" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pay-amount">
+                                <rect key="frame" x="244" y="22" width="101" height="20"/>
+                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pay-boxes">
+                                <rect key="frame" x="16" y="60" width="329" height="52"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pay-principal-box">
+                                        <rect key="frame" x="0.0" y="0.0" width="158.5" height="52"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="pay-principal-stack">
+                                                <rect key="frame" x="10" y="10" width="138.5" height="32"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRINCIPAL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pay-principal-title">
+                                                        <rect key="frame" x="0.0" y="0.0" width="138.5" height="12"/>
+                                                        <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="10"/>
+                                                        <color key="textColor" red="0.722" green="0.761" blue="0.780" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="64,000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pay-principal-value">
+                                                        <rect key="frame" x="0.0" y="16" width="138.5" height="16"/>
+                                                        <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="pay-principal-stack" firstAttribute="leading" secondItem="pay-principal-box" secondAttribute="leading" constant="10" id="pay-ps-l"/>
+                                            <constraint firstAttribute="trailing" secondItem="pay-principal-stack" secondAttribute="trailing" constant="10" id="pay-ps-r"/>
+                                            <constraint firstItem="pay-principal-stack" firstAttribute="top" secondItem="pay-principal-box" secondAttribute="top" constant="10" id="pay-ps-t"/>
+                                            <constraint firstAttribute="bottom" secondItem="pay-principal-stack" secondAttribute="bottom" constant="10" id="pay-ps-b"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pay-charges-box">
+                                        <rect key="frame" x="170.5" y="0.0" width="158.5" height="52"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="pay-charges-stack">
+                                                <rect key="frame" x="10" y="10" width="138.5" height="32"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BANK CHARGES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pay-charges-title">
+                                                        <rect key="frame" x="0.0" y="0.0" width="138.5" height="12"/>
+                                                        <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="10"/>
+                                                        <color key="textColor" red="0.722" green="0.761" blue="0.780" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8,000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pay-charges-value">
+                                                        <rect key="frame" x="0.0" y="16" width="138.5" height="16"/>
+                                                        <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="pay-charges-stack" firstAttribute="leading" secondItem="pay-charges-box" secondAttribute="leading" constant="10" id="pay-cs-l"/>
+                                            <constraint firstAttribute="trailing" secondItem="pay-charges-stack" secondAttribute="trailing" constant="10" id="pay-cs-r"/>
+                                            <constraint firstItem="pay-charges-stack" firstAttribute="top" secondItem="pay-charges-box" secondAttribute="top" constant="10" id="pay-cs-t"/>
+                                            <constraint firstAttribute="bottom" secondItem="pay-charges-stack" secondAttribute="bottom" constant="10" id="pay-cs-b"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="pay-boxes-h"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.071" green="0.133" blue="0.176" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="pay-badge" firstAttribute="leading" secondItem="pay-card" secondAttribute="leading" constant="16" id="pay-badge-l"/>
+                            <constraint firstItem="pay-badge" firstAttribute="top" secondItem="pay-card" secondAttribute="top" constant="16" id="pay-badge-t"/>
+                            <constraint firstItem="pay-date" firstAttribute="leading" secondItem="pay-badge" secondAttribute="trailing" constant="8" id="pay-date-l"/>
+                            <constraint firstItem="pay-date" firstAttribute="centerY" secondItem="pay-badge" secondAttribute="centerY" id="pay-date-cy"/>
+                            <constraint firstItem="pay-amount" firstAttribute="trailing" secondItem="pay-card" secondAttribute="trailing" constant="-16" id="pay-amount-r"/>
+                            <constraint firstItem="pay-amount" firstAttribute="centerY" secondItem="pay-badge" secondAttribute="centerY" id="pay-amount-cy"/>
+                            <constraint firstItem="pay-amount" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pay-date" secondAttribute="trailing" constant="8" id="pay-amount-l"/>
+                            <constraint firstItem="pay-boxes" firstAttribute="leading" secondItem="pay-card" secondAttribute="leading" constant="16" id="pay-boxes-l"/>
+                            <constraint firstAttribute="trailing" secondItem="pay-boxes" secondAttribute="trailing" constant="16" id="pay-boxes-r"/>
+                            <constraint firstItem="pay-boxes" firstAttribute="top" secondItem="pay-badge" secondAttribute="bottom" constant="12" id="pay-boxes-t"/>
+                            <constraint firstAttribute="bottom" secondItem="pay-boxes" secondAttribute="bottom" constant="16" id="pay-boxes-b"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="pay-card" firstAttribute="leading" secondItem="pay-content" secondAttribute="leading" id="pay-card-l"/>
+                    <constraint firstAttribute="trailing" secondItem="pay-card" secondAttribute="trailing" id="pay-card-r"/>
+                    <constraint firstItem="pay-card" firstAttribute="top" secondItem="pay-content" secondAttribute="top" id="pay-card-t"/>
+                    <constraint firstAttribute="bottom" secondItem="pay-card" secondAttribute="bottom" constant="12" id="pay-card-b"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="bankChargesBoxView" destination="pay-charges-box" id="out-charges-box"/>
+                <outlet property="cardView" destination="pay-card" id="out-card"/>
+                <outlet property="indexBadgeView" destination="pay-badge" id="out-badge"/>
+                <outlet property="lblAmount" destination="pay-amount" id="out-amount"/>
+                <outlet property="lblBankChargesValue" destination="pay-charges-value" id="out-charges-val"/>
+                <outlet property="lblDate" destination="pay-date" id="out-date"/>
+                <outlet property="lblIndex" destination="pay-index" id="out-index"/>
+                <outlet property="lblPrincipalValue" destination="pay-principal-value" id="out-principal-val"/>
+                <outlet property="principalBoxView" destination="pay-principal-box" id="out-principal-box"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

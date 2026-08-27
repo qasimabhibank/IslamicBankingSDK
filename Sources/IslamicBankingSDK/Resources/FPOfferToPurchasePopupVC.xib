@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-SemiBold.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+        <array key="Inter-VariableFont_slnt,wght.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPOfferToPurchasePopupVC" customModule="IslamicBankingSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="acceptDimOverlayView" destination="ov-acc" id="out-acc-ov"/>
+                <outlet property="btnAcceptAndContinue" destination="btn-acc" id="out-acc"/>
+                <outlet property="btnCheckbox" destination="chk-otp" id="out-chk"/>
+                <outlet property="btnGoBack" destination="btn-gb" id="out-gb"/>
+                <outlet property="cardMaxHeightConstraint" destination="card-max-h" id="out-max-h"/>
+                <outlet property="colSep1" destination="col-sep1" id="out-cs1"/>
+                <outlet property="colSep2" destination="col-sep2" id="out-cs2"/>
+                <outlet property="colSep3" destination="col-sep3" id="out-cs3"/>
+                <outlet property="contentView" destination="cnt-otp" id="out-cnt"/>
+                <outlet property="dimmedBackgroundView" destination="dim-otp" id="out-dim"/>
+                <outlet property="infoCardView" destination="info-card" id="out-info"/>
+                <outlet property="lblBodyText" destination="lbl-body" id="out-body"/>
+                <outlet property="lblConfirmation" destination="lbl-conf" id="out-conf"/>
+                <outlet property="lblCostHeader" destination="lbl-ch" id="out-ch"/>
+                <outlet property="lblCostValue" destination="lbl-cv" id="out-cv"/>
+                <outlet property="lblDateTitle" destination="lbl-dt" id="out-dt"/>
+                <outlet property="lblDateValue" destination="lbl-dv" id="out-dv"/>
+                <outlet property="lblGoodsHeader" destination="lbl-gh" id="out-gh"/>
+                <outlet property="lblGoodsValue" destination="lbl-gv" id="out-gv"/>
+                <outlet property="lblNameTitle" destination="lbl-nt" id="out-nt"/>
+                <outlet property="lblNameValue" destination="lbl-nv" id="out-nv"/>
+                <outlet property="lblProfitHeader" destination="lbl-ph" id="out-ph"/>
+                <outlet property="lblProfitValue" destination="lbl-pv" id="out-pv"/>
+                <outlet property="lblRelationTitle" destination="lbl-rt" id="out-rt"/>
+                <outlet property="lblRelationValue" destination="lbl-rv" id="out-rv"/>
+                <outlet property="lblTitle" destination="lbl-title" id="out-title"/>
+                <outlet property="lblTotalHeader" destination="lbl-th" id="out-th"/>
+                <outlet property="lblTotalValue" destination="lbl-tv" id="out-tv"/>
+                <outlet property="popupCardView" destination="card-otp" id="out-card"/>
+                <outlet property="rowSeparatorView" destination="row-sep" id="out-rsep"/>
+                <outlet property="scrollView" destination="scr-otp" id="out-scr"/>
+                <outlet property="scrollViewHeightConstraint" destination="scr-h" id="out-scr-h"/>
+                <outlet property="tableContainerView" destination="tbl-box" id="out-tbl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="out-view"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dim-otp">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="card-otp">
+                            <rect key="frame" x="20" y="172.66666666666663" width="353" height="507"/>
+                            <subviews>
+                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scr-otp">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="507"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnt-otp">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="493"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offer to Purchase" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-title">
+                                                    <rect key="frame" x="20" y="20" width="313" height="22"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="info-card">
+                                                    <rect key="frame" x="20" y="54" width="313" height="96"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-nt">
+                                                            <rect key="frame" x="12" y="12" width="36" height="16"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="13"/>
+                                                            <color key="textColor" red="0.72199999999999998" green="0.76100000000000001" blue="0.78000000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="Ahmed Hassan" textAlignment="right" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-nv">
+                                                            <rect key="frame" x="56" y="12" width="245" height="16"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="13"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Relation" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-rt">
+                                                            <rect key="frame" x="11.999999999999996" y="40.000000000000028" width="49.666666666666657" height="16"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="13"/>
+                                                            <color key="textColor" red="0.72199999999999998" green="0.76100000000000001" blue="0.78000000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="S/o Muhammad Hassan" textAlignment="right" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-rv">
+                                                            <rect key="frame" x="69.666666666666671" y="40.000000000000028" width="231.33333333333331" height="16"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="13"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-dt">
+                                                            <rect key="frame" x="12" y="68.000000000000028" width="29" height="16"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="13"/>
+                                                            <color key="textColor" red="0.72199999999999998" green="0.76100000000000001" blue="0.78000000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="May 01, 2026" textAlignment="right" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-dv">
+                                                            <rect key="frame" x="49" y="68.000000000000028" width="252" height="16"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="13"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.050999999999999997" green="0.098000000000000004" blue="0.13300000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="lbl-dt" secondAttribute="bottom" constant="12" id="info-b"/>
+                                                        <constraint firstItem="lbl-nv" firstAttribute="centerY" secondItem="lbl-nt" secondAttribute="centerY" id="info-c1"/>
+                                                        <constraint firstItem="lbl-rv" firstAttribute="centerY" secondItem="lbl-rt" secondAttribute="centerY" id="info-c2"/>
+                                                        <constraint firstItem="lbl-dv" firstAttribute="centerY" secondItem="lbl-dt" secondAttribute="centerY" id="info-c3"/>
+                                                        <constraint firstItem="lbl-nt" firstAttribute="leading" secondItem="info-card" secondAttribute="leading" constant="12" id="info-l1"/>
+                                                        <constraint firstItem="lbl-rt" firstAttribute="leading" secondItem="info-card" secondAttribute="leading" constant="12" id="info-l2"/>
+                                                        <constraint firstItem="lbl-dt" firstAttribute="leading" secondItem="info-card" secondAttribute="leading" constant="12" id="info-l3"/>
+                                                        <constraint firstItem="lbl-nv" firstAttribute="leading" secondItem="lbl-nt" secondAttribute="trailing" constant="8" id="info-m1"/>
+                                                        <constraint firstItem="lbl-rv" firstAttribute="leading" secondItem="lbl-rt" secondAttribute="trailing" constant="8" id="info-m2"/>
+                                                        <constraint firstItem="lbl-dv" firstAttribute="leading" secondItem="lbl-dt" secondAttribute="trailing" constant="8" id="info-m3"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lbl-nv" secondAttribute="trailing" constant="12" id="info-r1"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lbl-rv" secondAttribute="trailing" constant="12" id="info-r2"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lbl-dv" secondAttribute="trailing" constant="12" id="info-r3"/>
+                                                        <constraint firstItem="lbl-nt" firstAttribute="top" secondItem="info-card" secondAttribute="top" constant="12" id="info-t1"/>
+                                                        <constraint firstItem="lbl-rt" firstAttribute="top" secondItem="lbl-nt" secondAttribute="bottom" constant="12" id="info-t2"/>
+                                                        <constraint firstItem="lbl-dt" firstAttribute="top" secondItem="lbl-rt" secondAttribute="bottom" constant="12" id="info-t3"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-body">
+                                                    <rect key="frame" x="20" y="162.00000000000003" width="313" height="72.666666666666657"/>
+                                                    <string key="text">I wish to purchase the goods stated below in accordance with the terms agreed in Murabaha Facility Agreement (MFA) and will pay the price as per agreed payment schedule and request to the Institution to sell these goods to me.</string>
+                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
+                                                    <color key="textColor" red="0.72199999999999998" green="0.76100000000000001" blue="0.78000000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbl-box">
+                                                    <rect key="frame" x="20" y="246.66666666666663" width="313" height="61"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdr-row">
+                                                            <rect key="frame" x="0.0" y="0.0" width="313" height="30"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" text="Goods" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-gh">
+                                                                    <rect key="frame" x="6" y="8.6666666666666856" width="66.666666666666671" height="12.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="10"/>
+                                                                    <color key="textColor" red="0.72199999999999998" green="0.76100000000000001" blue="0.78000000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="col-sep1">
+                                                                    <rect key="frame" x="74.666666666666671" y="0.0" width="1" height="30"/>
+                                                                    <color key="backgroundColor" white="1" alpha="0.12" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="1" id="cs1-w"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" text="Cost" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-ch">
+                                                                    <rect key="frame" x="81.666666666666686" y="8.6666666666666856" width="66.333333333333314" height="12.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="10"/>
+                                                                    <color key="textColor" red="0.72199999999999998" green="0.76100000000000001" blue="0.78000000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="col-sep2">
+                                                                    <rect key="frame" x="154" y="0.0" width="1" height="30"/>
+                                                                    <color key="backgroundColor" white="1" alpha="0.12" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="1" id="cs2-w"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" text="Profit" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-ph">
+                                                                    <rect key="frame" x="161" y="8.6666666666666856" width="66.666666666666686" height="12.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="10"/>
+                                                                    <color key="textColor" red="0.72199999999999998" green="0.76100000000000001" blue="0.78000000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="col-sep3">
+                                                                    <rect key="frame" x="233.66666666666669" y="0.0" width="1" height="30"/>
+                                                                    <color key="backgroundColor" white="1" alpha="0.12" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="1" id="cs3-w"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" text="Total" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-th">
+                                                                    <rect key="frame" x="240.66666666666671" y="8.6666666666666856" width="66.333333333333343" height="12.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="10"/>
+                                                                    <color key="textColor" red="0.72199999999999998" green="0.76100000000000001" blue="0.78000000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.050999999999999997" green="0.098000000000000004" blue="0.13300000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstItem="lbl-gh" firstAttribute="centerY" secondItem="hdr-row" secondAttribute="centerY" id="hdr-c"/>
+                                                                <constraint firstItem="lbl-ch" firstAttribute="centerY" secondItem="hdr-row" secondAttribute="centerY" id="hdr-c2"/>
+                                                                <constraint firstItem="lbl-ph" firstAttribute="centerY" secondItem="hdr-row" secondAttribute="centerY" id="hdr-c3"/>
+                                                                <constraint firstItem="lbl-th" firstAttribute="centerY" secondItem="hdr-row" secondAttribute="centerY" id="hdr-c4"/>
+                                                                <constraint firstItem="lbl-gh" firstAttribute="width" secondItem="lbl-ch" secondAttribute="width" id="hdr-eq1"/>
+                                                                <constraint firstItem="lbl-ch" firstAttribute="width" secondItem="lbl-ph" secondAttribute="width" id="hdr-eq2"/>
+                                                                <constraint firstItem="lbl-ph" firstAttribute="width" secondItem="lbl-th" secondAttribute="width" id="hdr-eq3"/>
+                                                                <constraint firstAttribute="height" constant="30" id="hdr-h"/>
+                                                                <constraint firstItem="lbl-gh" firstAttribute="leading" secondItem="hdr-row" secondAttribute="leading" constant="6" id="hdr-l"/>
+                                                                <constraint firstItem="col-sep1" firstAttribute="leading" secondItem="lbl-gh" secondAttribute="trailing" constant="2" id="hdr-m1"/>
+                                                                <constraint firstItem="lbl-ch" firstAttribute="leading" secondItem="col-sep1" secondAttribute="trailing" constant="6" id="hdr-m2"/>
+                                                                <constraint firstItem="col-sep2" firstAttribute="leading" secondItem="lbl-ch" secondAttribute="trailing" constant="6" id="hdr-m3"/>
+                                                                <constraint firstItem="lbl-ph" firstAttribute="leading" secondItem="col-sep2" secondAttribute="trailing" constant="6" id="hdr-m4"/>
+                                                                <constraint firstItem="col-sep3" firstAttribute="leading" secondItem="lbl-ph" secondAttribute="trailing" constant="6" id="hdr-m5"/>
+                                                                <constraint firstItem="lbl-th" firstAttribute="leading" secondItem="col-sep3" secondAttribute="trailing" constant="6" id="hdr-m6"/>
+                                                                <constraint firstAttribute="trailing" secondItem="lbl-th" secondAttribute="trailing" constant="6" id="hdr-r"/>
+                                                                <constraint firstAttribute="bottom" secondItem="col-sep1" secondAttribute="bottom" id="hdr-s1b"/>
+                                                                <constraint firstItem="col-sep1" firstAttribute="top" secondItem="hdr-row" secondAttribute="top" id="hdr-s1t"/>
+                                                                <constraint firstAttribute="bottom" secondItem="col-sep2" secondAttribute="bottom" id="hdr-s2b"/>
+                                                                <constraint firstItem="col-sep2" firstAttribute="top" secondItem="hdr-row" secondAttribute="top" id="hdr-s2t"/>
+                                                                <constraint firstAttribute="bottom" secondItem="col-sep3" secondAttribute="bottom" id="hdr-s3b"/>
+                                                                <constraint firstItem="col-sep3" firstAttribute="top" secondItem="hdr-row" secondAttribute="top" id="hdr-s3t"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="row-sep">
+                                                            <rect key="frame" x="0.0" y="30" width="313" height="1"/>
+                                                            <color key="backgroundColor" white="1" alpha="0.12" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="rsep-h"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="data-row">
+                                                            <rect key="frame" x="0.0" y="31" width="313" height="30"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" text="As per invoice" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-gv">
+                                                                    <rect key="frame" x="6" y="8.6666666666666856" width="66.666666666666671" height="12.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="10"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" text="1,500,000" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-cv">
+                                                                    <rect key="frame" x="81.666666666666686" y="8.6666666666666856" width="66.333333333333314" height="12.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="10"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" text="150,000" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-pv">
+                                                                    <rect key="frame" x="161" y="8.6666666666666856" width="66.666666666666686" height="12.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="10"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" text="1,650,000" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-tv">
+                                                                    <rect key="frame" x="240.66666666666671" y="8.6666666666666856" width="66.333333333333343" height="12.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="10"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="lbl-gv" firstAttribute="centerY" secondItem="data-row" secondAttribute="centerY" id="data-c"/>
+                                                                <constraint firstItem="lbl-cv" firstAttribute="centerY" secondItem="data-row" secondAttribute="centerY" id="data-c2"/>
+                                                                <constraint firstItem="lbl-pv" firstAttribute="centerY" secondItem="data-row" secondAttribute="centerY" id="data-c3"/>
+                                                                <constraint firstItem="lbl-tv" firstAttribute="centerY" secondItem="data-row" secondAttribute="centerY" id="data-c4"/>
+                                                                <constraint firstItem="lbl-gv" firstAttribute="width" secondItem="lbl-cv" secondAttribute="width" id="data-eq1"/>
+                                                                <constraint firstItem="lbl-cv" firstAttribute="width" secondItem="lbl-pv" secondAttribute="width" id="data-eq2"/>
+                                                                <constraint firstItem="lbl-pv" firstAttribute="width" secondItem="lbl-tv" secondAttribute="width" id="data-eq3"/>
+                                                                <constraint firstAttribute="height" constant="30" id="data-h"/>
+                                                                <constraint firstItem="lbl-gv" firstAttribute="leading" secondItem="data-row" secondAttribute="leading" constant="6" id="data-l"/>
+                                                                <constraint firstItem="lbl-cv" firstAttribute="leading" secondItem="lbl-gv" secondAttribute="trailing" constant="9" id="data-m1"/>
+                                                                <constraint firstItem="lbl-pv" firstAttribute="leading" secondItem="lbl-cv" secondAttribute="trailing" constant="13" id="data-m2"/>
+                                                                <constraint firstItem="lbl-tv" firstAttribute="leading" secondItem="lbl-pv" secondAttribute="trailing" constant="13" id="data-m3"/>
+                                                                <constraint firstAttribute="trailing" secondItem="lbl-tv" secondAttribute="trailing" constant="6" id="data-r"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.070999999999999994" green="0.13300000000000001" blue="0.17599999999999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="data-row" secondAttribute="bottom" id="tbl-b"/>
+                                                        <constraint firstItem="hdr-row" firstAttribute="leading" secondItem="tbl-box" secondAttribute="leading" id="tbl-l"/>
+                                                        <constraint firstItem="row-sep" firstAttribute="leading" secondItem="tbl-box" secondAttribute="leading" id="tbl-l2"/>
+                                                        <constraint firstItem="data-row" firstAttribute="leading" secondItem="tbl-box" secondAttribute="leading" id="tbl-l3"/>
+                                                        <constraint firstAttribute="trailing" secondItem="hdr-row" secondAttribute="trailing" id="tbl-r"/>
+                                                        <constraint firstAttribute="trailing" secondItem="row-sep" secondAttribute="trailing" id="tbl-r2"/>
+                                                        <constraint firstAttribute="trailing" secondItem="data-row" secondAttribute="trailing" id="tbl-r3"/>
+                                                        <constraint firstItem="hdr-row" firstAttribute="top" secondItem="tbl-box" secondAttribute="top" id="tbl-t1"/>
+                                                        <constraint firstItem="row-sep" firstAttribute="top" secondItem="hdr-row" secondAttribute="bottom" id="tbl-t2"/>
+                                                        <constraint firstItem="data-row" firstAttribute="top" secondItem="row-sep" secondAttribute="bottom" id="tbl-t3"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="chk-stack">
+                                                    <rect key="frame" x="20" y="319.66666666666663" width="313" height="29.333333333333314"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chk-otp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="22" id="chk-h"/>
+                                                                <constraint firstAttribute="width" constant="22" id="chk-w"/>
+                                                            </constraints>
+                                                            <state key="normal" image="checkbox-unchecked-squre"/>
+                                                            <connections>
+                                                                <action selector="btnCheckboxTapped:" destination="-1" eventType="touchUpInside" id="act-chk"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I confirm and accept this offer to purchase as per the terms stated above." lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-conf">
+                                                            <rect key="frame" x="32" y="0.0" width="281" height="29.333333333333332"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
+                                                            <color key="textColor" red="0.72199999999999998" green="0.76100000000000001" blue="0.78000000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wrap-acc">
+                                                    <rect key="frame" x="20" y="365" width="313" height="48"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-acc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="313" height="48"/>
+                                                            <color key="backgroundColor" red="0.14117647059999999" green="0.6705882353" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
+                                                            <state key="normal" title="Accept and Continue">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="24"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="btnAcceptAndContinueTapped:" destination="-1" eventType="touchUpInside" id="act-acc"/>
+                                                            </connections>
+                                                        </button>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ov-acc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="313" height="48"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="24"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="btn-acc" secondAttribute="trailing" id="AMh-LR-RCq"/>
+                                                        <constraint firstAttribute="height" constant="48" id="acc-h"/>
+                                                        <constraint firstAttribute="bottom" secondItem="btn-acc" secondAttribute="bottom" id="wrap-acc-bb"/>
+                                                        <constraint firstItem="btn-acc" firstAttribute="leading" secondItem="wrap-acc" secondAttribute="leading" id="wrap-acc-bl"/>
+                                                        <constraint firstAttribute="trailing" secondItem="wrap-acc" secondAttribute="trailing" id="wrap-acc-br"/>
+                                                        <constraint firstItem="btn-acc" firstAttribute="top" secondItem="wrap-acc" secondAttribute="top" id="wrap-acc-bt"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ov-acc" secondAttribute="bottom" id="wrap-acc-ob"/>
+                                                        <constraint firstItem="ov-acc" firstAttribute="leading" secondItem="wrap-acc" secondAttribute="leading" id="wrap-acc-ol"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ov-acc" secondAttribute="trailing" id="wrap-acc-or"/>
+                                                        <constraint firstItem="ov-acc" firstAttribute="top" secondItem="wrap-acc" secondAttribute="top" id="wrap-acc-ot"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="24"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-gb">
+                                                    <rect key="frame" x="20" y="425" width="313" height="48"/>
+                                                    <color key="backgroundColor" red="0.039" green="0.078" blue="0.11" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="gb-h"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
+                                                    <state key="normal" title="Go Back">
+                                                        <color key="titleColor" name="IslamicTeal"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="24"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" name="IslamicTeal"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="btnGoBackTapped:" destination="-1" eventType="touchUpInside" id="act-gb"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lbl-title" firstAttribute="top" secondItem="cnt-otp" secondAttribute="top" constant="20" id="c1"/>
+                                                <constraint firstItem="tbl-box" firstAttribute="top" secondItem="lbl-body" secondAttribute="bottom" constant="12" id="c10"/>
+                                                <constraint firstItem="tbl-box" firstAttribute="leading" secondItem="cnt-otp" secondAttribute="leading" constant="20" id="c11"/>
+                                                <constraint firstAttribute="trailing" secondItem="tbl-box" secondAttribute="trailing" constant="20" id="c12"/>
+                                                <constraint firstItem="chk-stack" firstAttribute="top" secondItem="tbl-box" secondAttribute="bottom" constant="12" id="c13"/>
+                                                <constraint firstItem="chk-stack" firstAttribute="leading" secondItem="cnt-otp" secondAttribute="leading" constant="20" id="c14"/>
+                                                <constraint firstAttribute="trailing" secondItem="chk-stack" secondAttribute="trailing" constant="20" id="c15"/>
+                                                <constraint firstItem="wrap-acc" firstAttribute="top" secondItem="chk-stack" secondAttribute="bottom" constant="16" id="c16"/>
+                                                <constraint firstItem="wrap-acc" firstAttribute="leading" secondItem="cnt-otp" secondAttribute="leading" constant="20" id="c17"/>
+                                                <constraint firstAttribute="trailing" secondItem="wrap-acc" secondAttribute="trailing" constant="20" id="c18"/>
+                                                <constraint firstItem="btn-gb" firstAttribute="top" secondItem="wrap-acc" secondAttribute="bottom" constant="12" id="c19"/>
+                                                <constraint firstItem="lbl-title" firstAttribute="leading" secondItem="cnt-otp" secondAttribute="leading" constant="20" id="c2"/>
+                                                <constraint firstItem="btn-gb" firstAttribute="leading" secondItem="cnt-otp" secondAttribute="leading" constant="20" id="c20"/>
+                                                <constraint firstAttribute="trailing" secondItem="btn-gb" secondAttribute="trailing" constant="20" id="c21"/>
+                                                <constraint firstAttribute="bottom" secondItem="btn-gb" secondAttribute="bottom" constant="20" id="c22"/>
+                                                <constraint firstAttribute="width" secondItem="cnt-otp" secondAttribute="width" id="c23"/>
+                                                <constraint firstAttribute="trailing" secondItem="lbl-title" secondAttribute="trailing" constant="20" id="c3"/>
+                                                <constraint firstItem="info-card" firstAttribute="top" secondItem="lbl-title" secondAttribute="bottom" constant="12" id="c4"/>
+                                                <constraint firstItem="info-card" firstAttribute="leading" secondItem="cnt-otp" secondAttribute="leading" constant="20" id="c5"/>
+                                                <constraint firstAttribute="trailing" secondItem="info-card" secondAttribute="trailing" constant="20" id="c6"/>
+                                                <constraint firstItem="lbl-body" firstAttribute="top" secondItem="info-card" secondAttribute="bottom" constant="12" id="c7"/>
+                                                <constraint firstItem="lbl-body" firstAttribute="leading" secondItem="cnt-otp" secondAttribute="leading" constant="20" id="c8"/>
+                                                <constraint firstAttribute="trailing" secondItem="lbl-body" secondAttribute="trailing" constant="20" id="c9"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="cnt-otp" secondAttribute="bottom" id="s-b"/>
+                                        <constraint firstItem="cnt-otp" firstAttribute="leading" secondItem="scr-otp" secondAttribute="leading" id="s-l"/>
+                                        <constraint firstAttribute="trailing" secondItem="cnt-otp" secondAttribute="trailing" id="s-r"/>
+                                        <constraint firstItem="cnt-otp" firstAttribute="top" secondItem="scr-otp" secondAttribute="top" id="s-t"/>
+                                        <constraint firstItem="cnt-otp" firstAttribute="width" secondItem="scr-otp" secondAttribute="width" id="s-w"/>
+                                    </constraints>
+                                </scrollView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.070999999999999994" green="0.13300000000000001" blue="0.17599999999999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="scr-otp" secondAttribute="bottom" id="card-b"/>
+                                <constraint firstItem="scr-otp" firstAttribute="leading" secondItem="card-otp" secondAttribute="leading" id="card-l"/>
+                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="804" id="card-max-h"/>
+                                <constraint firstAttribute="trailing" secondItem="scr-otp" secondAttribute="trailing" id="card-r"/>
+                                <constraint firstItem="scr-otp" firstAttribute="top" secondItem="card-otp" secondAttribute="top" id="card-t"/>
+                                <constraint firstItem="scr-otp" firstAttribute="height" constant="507" id="scr-h"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="card-otp" secondAttribute="bottom" constant="24" id="dim-b"/>
+                        <constraint firstItem="card-otp" firstAttribute="centerY" secondItem="dim-otp" secondAttribute="centerY" priority="750" id="dim-cy"/>
+                        <constraint firstItem="card-otp" firstAttribute="leading" secondItem="dim-otp" secondAttribute="leading" constant="20" id="dim-l"/>
+                        <constraint firstAttribute="trailing" secondItem="card-otp" secondAttribute="trailing" constant="20" id="dim-r"/>
+                        <constraint firstItem="card-otp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dim-otp" secondAttribute="top" constant="24" id="dim-t"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="safe-otp"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="dim-otp" secondAttribute="bottom" id="root-b"/>
+                <constraint firstItem="dim-otp" firstAttribute="leading" secondItem="safe-otp" secondAttribute="leading" id="root-l"/>
+                <constraint firstAttribute="trailing" secondItem="dim-otp" secondAttribute="trailing" id="root-r"/>
+                <constraint firstItem="dim-otp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="root-t"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="0.0"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkbox-unchecked-squre" width="20" height="21"/>
+        <namedColor name="IslamicTeal">
+            <color red="0.2627450980392157" green="0.54117647058823526" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

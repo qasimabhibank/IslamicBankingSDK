@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+        <array key="Inter-SemiBold.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPInvoiceUploadPopupVC" customModule="IslamicBankingSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="btnDone" destination="btn-done" id="out-done"/>
+                <outlet property="btnGoBack" destination="btn-gb" id="out-gb"/>
+                <outlet property="btnOpenCamera" destination="btn-cam" id="out-cam"/>
+                <outlet property="btnRemoveFile" destination="btn-rm" id="out-rm"/>
+                <outlet property="btnUploadInvoice" destination="btn-upl" id="out-upl"/>
+                <outlet property="contentContainerHeightConstraint" destination="box-h" id="out-box-h"/>
+                <outlet property="contentContainerView" destination="content-box" id="out-box"/>
+                <outlet property="dimmedBackgroundView" destination="dim-inv" id="out-dim"/>
+                <outlet property="fileRowView" destination="file-row" id="out-row"/>
+                <outlet property="imgThumbnail" destination="img-thumb" id="out-thumb"/>
+                <outlet property="imgUploadIcon" destination="img-icon" id="out-icon"/>
+                <outlet property="lblFileName" destination="lbl-fname" id="out-fname"/>
+                <outlet property="lblFileSize" destination="lbl-fsize" id="out-fsize"/>
+                <outlet property="lblOr" destination="lbl-or" id="out-or"/>
+                <outlet property="lblSubtitle" destination="lbl-sub" id="out-sub"/>
+                <outlet property="lblTitle" destination="lbl-title" id="out-title"/>
+                <outlet property="lblUploadedFileTitle" destination="lbl-up-title" id="out-up-title"/>
+                <outlet property="popupCardView" destination="card-inv" id="out-card"/>
+                <outlet property="uploadStateView" destination="upload-state" id="out-upload"/>
+                <outlet property="uploadedStateView" destination="uploaded-state" id="out-uploaded"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="out-view"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dim-inv">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="card-inv">
+                            <rect key="frame" x="20" y="243" width="353" height="366"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please share the invoice" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-title">
+                                    <rect key="frame" x="20" y="24" width="313" height="22"/>
+                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="18"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jpg, png or PDF format" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-sub">
+                                    <rect key="frame" x="20" y="50" width="313" height="16"/>
+                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="13"/>
+                                    <color key="textColor" red="0.722" green="0.761" blue="0.780" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="content-box">
+                                    <rect key="frame" x="20" y="78" width="313" height="200"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="upload-state">
+                                            <rect key="frame" x="0.0" y="0.0" width="313" height="206.66666666666666"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tray.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="img-icon">
+                                                    <rect key="frame" x="136.66666666666666" y="13.999999999999996" width="40" height="37.666666666666657"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="icon-h"/>
+                                                        <constraint firstAttribute="width" constant="40" id="icon-w"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-upl">
+                                                    <rect key="frame" x="16" y="64" width="281" height="48"/>
+                                                    <color key="backgroundColor" red="0.14117647059999999" green="0.6705882353" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="upl-h"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
+                                                    <state key="normal" title="Upload Invoice">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="24"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="btnUploadInvoiceTapped:" destination="-1" eventType="touchUpInside" id="act-upl"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-or">
+                                                    <rect key="frame" x="16" y="120" width="281" height="14.666666666666657"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
+                                                    <color key="textColor" red="0.722" green="0.761" blue="0.780" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-cam">
+                                                    <rect key="frame" x="16" y="142.66666666666669" width="281" height="48"/>
+                                                    <color key="backgroundColor" red="0.039" green="0.078" blue="0.110" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="cam-h"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
+                                                    <state key="normal" title="Open Camera">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="24"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" white="1" alpha="0.12" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="btnOpenCameraTapped:" destination="-1" eventType="touchUpInside" id="act-cam"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="btn-cam" secondAttribute="bottom" constant="16" id="us-b"/>
+                                                <constraint firstItem="img-icon" firstAttribute="centerX" secondItem="upload-state" secondAttribute="centerX" id="us-c1"/>
+                                                <constraint firstItem="btn-upl" firstAttribute="leading" secondItem="upload-state" secondAttribute="leading" constant="16" id="us-l1"/>
+                                                <constraint firstItem="lbl-or" firstAttribute="leading" secondItem="upload-state" secondAttribute="leading" constant="16" id="us-l2"/>
+                                                <constraint firstItem="btn-cam" firstAttribute="leading" secondItem="upload-state" secondAttribute="leading" constant="16" id="us-l3"/>
+                                                <constraint firstAttribute="trailing" secondItem="btn-upl" secondAttribute="trailing" constant="16" id="us-r1"/>
+                                                <constraint firstAttribute="trailing" secondItem="lbl-or" secondAttribute="trailing" constant="16" id="us-r2"/>
+                                                <constraint firstAttribute="trailing" secondItem="btn-cam" secondAttribute="trailing" constant="16" id="us-r3"/>
+                                                <constraint firstItem="img-icon" firstAttribute="top" secondItem="upload-state" secondAttribute="top" constant="16" id="us-t1"/>
+                                                <constraint firstItem="btn-upl" firstAttribute="top" secondItem="img-icon" secondAttribute="bottom" constant="12" id="us-t2"/>
+                                                <constraint firstItem="lbl-or" firstAttribute="top" secondItem="btn-upl" secondAttribute="bottom" constant="8" id="us-t3"/>
+                                                <constraint firstItem="btn-cam" firstAttribute="top" secondItem="lbl-or" secondAttribute="bottom" constant="8" id="us-t4"/>
+                                            </constraints>
+                                        </view>
+                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uploaded-state">
+                                            <rect key="frame" x="0.0" y="0.0" width="313" height="173"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uploaded File" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-up-title">
+                                                    <rect key="frame" x="16" y="16" width="281" height="17"/>
+                                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </label>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="file-row">
+                                                    <rect key="frame" x="16" y="41" width="281" height="56"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="img-thumb">
+                                                            <rect key="frame" x="10" y="8" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="thumb-h"/>
+                                                                <constraint firstAttribute="width" constant="40" id="thumb-w"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="img.jpg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-fname">
+                                                            <rect key="frame" x="58" y="12" width="183" height="16"/>
+                                                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="13"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="1.2 MB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-fsize">
+                                                            <rect key="frame" x="58" y="30" width="183" height="14"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="11"/>
+                                                            <color key="textColor" red="0.722" green="0.761" blue="0.780" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-rm">
+                                                            <rect key="frame" x="249" y="16" width="24" height="24"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="24" id="rm-h"/>
+                                                                <constraint firstAttribute="width" constant="24" id="rm-w"/>
+                                                            </constraints>
+                                                            <color key="tintColor" red="0.14117647059999999" green="0.6705882353" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <state key="normal" image="xmark.circle.fill" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="btnRemoveFileTapped:" destination="-1" eventType="touchUpInside" id="act-rm"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="0.08" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="img-thumb" firstAttribute="centerY" secondItem="file-row" secondAttribute="centerY" id="row-c1"/>
+                                                        <constraint firstItem="btn-rm" firstAttribute="centerY" secondItem="file-row" secondAttribute="centerY" id="row-c2"/>
+                                                        <constraint firstAttribute="height" constant="56" id="row-h"/>
+                                                        <constraint firstItem="img-thumb" firstAttribute="leading" secondItem="file-row" secondAttribute="leading" constant="10" id="row-l1"/>
+                                                        <constraint firstItem="lbl-fname" firstAttribute="leading" secondItem="img-thumb" secondAttribute="trailing" constant="8" id="row-l2"/>
+                                                        <constraint firstItem="lbl-fsize" firstAttribute="leading" secondItem="lbl-fname" secondAttribute="leading" id="row-l3"/>
+                                                        <constraint firstItem="btn-rm" firstAttribute="leading" secondItem="lbl-fname" secondAttribute="trailing" constant="8" id="row-m"/>
+                                                        <constraint firstAttribute="trailing" secondItem="btn-rm" secondAttribute="trailing" constant="8" id="row-r1"/>
+                                                        <constraint firstItem="lbl-fsize" firstAttribute="trailing" secondItem="lbl-fname" secondAttribute="trailing" id="row-r3"/>
+                                                        <constraint firstItem="lbl-fname" firstAttribute="top" secondItem="file-row" secondAttribute="top" constant="12" id="row-t1"/>
+                                                        <constraint firstItem="lbl-fsize" firstAttribute="top" secondItem="lbl-fname" secondAttribute="bottom" constant="2" id="row-t2"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-done">
+                                                    <rect key="frame" x="16" y="109" width="281" height="48"/>
+                                                    <color key="backgroundColor" red="0.14117647059999999" green="0.6705882353" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="done-h"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
+                                                    <state key="normal" title="Done">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="24"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="btnDoneTapped:" destination="-1" eventType="touchUpInside" id="act-done"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="btn-done" secondAttribute="bottom" constant="16" id="ups-b"/>
+                                                <constraint firstItem="lbl-up-title" firstAttribute="leading" secondItem="uploaded-state" secondAttribute="leading" constant="16" id="ups-l1"/>
+                                                <constraint firstItem="file-row" firstAttribute="leading" secondItem="uploaded-state" secondAttribute="leading" constant="16" id="ups-l2"/>
+                                                <constraint firstItem="btn-done" firstAttribute="leading" secondItem="uploaded-state" secondAttribute="leading" constant="16" id="ups-l3"/>
+                                                <constraint firstAttribute="trailing" secondItem="lbl-up-title" secondAttribute="trailing" constant="16" id="ups-r1"/>
+                                                <constraint firstAttribute="trailing" secondItem="file-row" secondAttribute="trailing" constant="16" id="ups-r2"/>
+                                                <constraint firstAttribute="trailing" secondItem="btn-done" secondAttribute="trailing" constant="16" id="ups-r3"/>
+                                                <constraint firstItem="lbl-up-title" firstAttribute="top" secondItem="uploaded-state" secondAttribute="top" constant="16" id="ups-t1"/>
+                                                <constraint firstItem="file-row" firstAttribute="top" secondItem="lbl-up-title" secondAttribute="bottom" constant="8" id="ups-t2"/>
+                                                <constraint firstItem="btn-done" firstAttribute="top" secondItem="file-row" secondAttribute="bottom" constant="12" id="ups-t3"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.051" green="0.098" blue="0.133" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="210" id="box-h"/>
+                                        <constraint firstItem="upload-state" firstAttribute="leading" secondItem="content-box" secondAttribute="leading" id="box-upload-l"/>
+                                        <constraint firstAttribute="trailing" secondItem="upload-state" secondAttribute="trailing" id="box-upload-r"/>
+                                        <constraint firstItem="upload-state" firstAttribute="top" secondItem="content-box" secondAttribute="top" id="box-upload-t"/>
+                                        <constraint firstItem="uploaded-state" firstAttribute="leading" secondItem="content-box" secondAttribute="leading" id="box-uploaded-l"/>
+                                        <constraint firstAttribute="trailing" secondItem="uploaded-state" secondAttribute="trailing" id="box-uploaded-r"/>
+                                        <constraint firstItem="uploaded-state" firstAttribute="top" secondItem="content-box" secondAttribute="top" id="box-uploaded-t"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="1" alpha="0.12" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-gb">
+                                    <rect key="frame" x="20" y="294" width="313" height="48"/>
+                                    <color key="backgroundColor" red="0.039" green="0.078" blue="0.110" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="gb-h"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
+                                    <state key="normal" title="Go Back">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="24"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="1" alpha="0.12" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="btnGoBackTapped:" destination="-1" eventType="touchUpInside" id="act-gb"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.071" green="0.133" blue="0.176" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="lbl-title" firstAttribute="top" secondItem="card-inv" secondAttribute="top" constant="24" id="c1"/>
+                                <constraint firstItem="btn-gb" firstAttribute="top" secondItem="content-box" secondAttribute="bottom" constant="20" id="c10"/>
+                                <constraint firstItem="btn-gb" firstAttribute="leading" secondItem="card-inv" secondAttribute="leading" constant="20" id="c11"/>
+                                <constraint firstAttribute="trailing" secondItem="btn-gb" secondAttribute="trailing" constant="20" id="c12"/>
+                                <constraint firstAttribute="bottom" secondItem="btn-gb" secondAttribute="bottom" constant="24" id="c13"/>
+                                <constraint firstItem="lbl-title" firstAttribute="leading" secondItem="card-inv" secondAttribute="leading" constant="20" id="c2"/>
+                                <constraint firstAttribute="trailing" secondItem="lbl-title" secondAttribute="trailing" constant="20" id="c3"/>
+                                <constraint firstItem="lbl-sub" firstAttribute="top" secondItem="lbl-title" secondAttribute="bottom" constant="4" id="c4"/>
+                                <constraint firstItem="lbl-sub" firstAttribute="leading" secondItem="card-inv" secondAttribute="leading" constant="20" id="c5"/>
+                                <constraint firstAttribute="trailing" secondItem="lbl-sub" secondAttribute="trailing" constant="20" id="c6"/>
+                                <constraint firstItem="content-box" firstAttribute="top" secondItem="lbl-sub" secondAttribute="bottom" constant="16" id="c7"/>
+                                <constraint firstItem="content-box" firstAttribute="leading" secondItem="card-inv" secondAttribute="leading" constant="20" id="c8"/>
+                                <constraint firstAttribute="trailing" secondItem="content-box" secondAttribute="trailing" constant="20" id="c9"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.6" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="card-inv" secondAttribute="bottom" constant="24" id="dim-b"/>
+                        <constraint firstItem="card-inv" firstAttribute="centerY" secondItem="dim-inv" secondAttribute="centerY" id="dim-cy"/>
+                        <constraint firstItem="card-inv" firstAttribute="leading" secondItem="dim-inv" secondAttribute="leading" constant="20" id="dim-l"/>
+                        <constraint firstAttribute="trailing" secondItem="card-inv" secondAttribute="trailing" constant="20" id="dim-r"/>
+                        <constraint firstItem="card-inv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dim-inv" secondAttribute="top" constant="24" id="dim-t"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="safe-inv"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="dim-inv" secondAttribute="bottom" id="root-b"/>
+                <constraint firstItem="dim-inv" firstAttribute="leading" secondItem="safe-inv" secondAttribute="leading" id="root-l"/>
+                <constraint firstAttribute="trailing" secondItem="dim-inv" secondAttribute="trailing" id="root-r"/>
+                <constraint firstItem="dim-inv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="root-t"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="0.0"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="tray.and.arrow.up" catalog="system" width="128" height="110"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="IslamicTeal">
+            <color red="0.2627450980392157" green="0.54117647058823526" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryBlue">
+            <color red="0.090000003576278687" green="0.16500000655651093" blue="0.27500000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,11 @@
+.swiftpm/
+.build/
+DerivedData/
+*.xcodeproj
+*.xcworkspace
+xcuserdata/
+*.xcuserstate
+.DS_Store
+.idea/
+*.swp
+Package.resolved
